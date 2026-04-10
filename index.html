@@ -25,6 +25,22 @@
         .nav-link::after { content: ""; position: absolute; left: 0; bottom: -6px; width: 100%; height: 1px; background: rgba(255,255,255,0.7); transform: scaleX(0); transform-origin: left; transition: transform 0.3s ease; }
         .nav-link:hover { letter-spacing: 0.3em; }
         .nav-link:hover::after, .nav-link.active::after { transform: scaleX(1); }
+        .hero-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem; }
+        .floating-card { position: relative; overflow: hidden; border: 1px solid rgba(255,255,255,0.08); background: radial-gradient(circle at top, rgba(255,255,255,0.08), rgba(14,14,14,0.6)); animation: float-slow 10s ease-in-out infinite; }
+        .floating-card::after { content: ""; position: absolute; inset: 0; background: linear-gradient(120deg, rgba(255,255,255,0.05), transparent); mix-blend-mode: screen; }
+        .floating-card img { mix-blend-mode: screen; }
+        .noise-layer { position: absolute; inset: 0; pointer-events: none; background-image: repeating-linear-gradient(0deg, rgba(255,255,255,0.03), rgba(255,255,255,0.03) 1px, transparent 1px, transparent 2px); opacity: 0.2; }
+        @keyframes float-slow {
+            0% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(0.6deg); }
+            100% { transform: translateY(0) rotate(0deg); }
+        }
+        @keyframes fade-slide-up {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in { animation: fade-slide-up 0.9s ease forwards; }
+        .fade-in-delay { animation: fade-slide-up 1s ease forwards; animation-delay: 0.15s; opacity: 0; }
     </style>
     </head>
     <body class="font-body selection:bg-primary selection:text-on-primary">
@@ -53,179 +69,107 @@
             </div>
         </header>
         <main class="pt-28 pb-24">
-            <!-- Hero Section -->
-            <section
-                class="relative min-h-[819px] flex flex-col justify-end px-6 md:px-12 py-20 overflow-hidden">
-                <div class="absolute inset-0 z-0">
-                    <img alt="Abstract digital music visualization"
-                        class="w-full h-full object-cover opacity-40 grayscale hover:grayscale-0 transition-all duration-1000"
-                        data-alt="Monochromatic abstract sound wave visualization with deep charcoal tones and sharp geometric artifacts under atmospheric low light"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAB87rrQZHDnuL-XYn_-4QpbD3OApNkLHR75bb3gvkPsZPV3oGUB-ptCo7bh-0YGVcbDaH0YLHpOee-g4xwH4P0_2FOhSnUlOtq0NfD7JBk9Bbi1hxGbN-gxgu8hIYbxwAoOHBE_krmGifyL7SaPgr0DsmcC6AIjyo4yXUTD-AtTiTKjN154h42hGnSyzf8ziTmbGcl4WitynP4ENhN5Rxq9c2KZ6i6yi43hV9HIzSjokCoLwOBIbcWUhZ31D53HAHLanikMlBz1NPp"
-                        style>
-                    <div
-                        class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
-                </div>
-                <div class="relative z-10 max-w-4xl">
-                    <div class="flex items-baseline gap-4 mb-2">
-                        <span
-                            class="font-mono text-[10px] text-primary tracking-[0.3em]"
-                            style>SEC_001 // INITIALIZING</span>
-                        <div class="h-[1px] w-12 bg-primary"></div>
-                    </div>
-                    <h1
-                        class="text-6xl md:text-8xl font-headline font-bold tracking-tighter lowercase text-tertiary mb-6 leading-[0.9]"
-                        style>
-                        Silence <br>is a specimen.
+            <!-- Minimal Hero -->
+            <section class="px-6 md:px-12 max-w-[1440px] mx-auto min-h-[80vh] flex flex-col lg:flex-row items-center gap-16 py-24">
+                <div class="flex-1 space-y-6 fade-in">
+                    <p class="font-mono text-[11px] tracking-[0.5em] text-primary uppercase">studio log_07.02</p>
+                    <h1 class="text-5xl md:text-7xl font-headline tracking-tight leading-[1.05] text-white">
+                        Archiving<br class="hidden md:block"/>silence, light, and<br/>everything between.
                     </h1>
-                    <p
-                        class="max-w-md text-on-surface-variant font-mono text-sm leading-relaxed border-l border-outline-variant/30 pl-6"
-                        style>
-                        A digital conservatory for experimental soundscapes and
-                        structural resonance. Curated for the few, archived for
-                        the future.
+                    <p class="font-mono text-sm text-on-surface-variant/80 max-w-md">
+                        NEUROMANCER is a design-forward audio atelier crafting bespoke releases, spatial sound, and sonic identities for contemporary art institutions.
+                    </p>
+                    <div class="flex flex-wrap gap-6 text-[11px] font-mono uppercase tracking-[0.3em] text-on-surface-variant">
+                        <span>sound direction</span>
+                        <span>immersive performance</span>
+                        <span>analog preservation</span>
+                    </div>
+                </div>
+                <div class="flex-1 relative fade-in-delay">
+                    <div class="floating-card rounded-none p-8">
+                        <div class="noise-layer"></div>
+                        <img src="resources/releases/The Concealing Vol.1/IMG_0955.JPG" alt="The Concealing visual" class="w-full h-[420px] object-cover opacity-80">
+                        <div class="absolute top-8 left-8 font-mono text-[10px] tracking-[0.4em] uppercase text-white/70">project: the concealing</div>
+                        <div class="absolute bottom-8 right-8 text-right font-mono text-[11px] text-white/70 space-y-1">
+                            <p>status: active</p>
+                            <p>format: av_installation</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Selected Works -->
+            <section class="px-6 md:px-12 max-w-[1440px] mx-auto py-16 border-t border-outline-variant/20">
+                <div class="flex items-center justify-between mb-12">
+                    <h2 class="font-headline text-2xl tracking-tight text-white">selected works</h2>
+                    <span class="font-mono text-[10px] tracking-[0.4em] text-on-surface-variant uppercase">archive 2023 — 2026</span>
+                </div>
+                <div class="hero-grid">
+                    <article class="group border border-outline-variant/10 p-6 flex flex-col gap-6 hover:border-primary/40 transition">
+                        <div class="relative aspect-square overflow-hidden">
+                            <img src="resources/releases/The Concealing Vol.1/IMG_0955.JPG" alt="The Concealing release" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-70"></div>
+                            <span class="absolute bottom-4 left-4 font-mono text-[10px] tracking-[0.3em] text-white uppercase">nm // 082</span>
+                        </div>
+                        <div class="space-y-2">
+                            <h3 class="text-2xl font-headline tracking-tight text-white">The Concealing</h3>
+                            <p class="font-mono text-sm text-on-surface-variant/80">Audio installation exploring occlusion, inspired by northern lights data.</p>
+                        </div>
+                        <div class="font-mono text-[11px] uppercase tracking-[0.3em] text-primary">view project →</div>
+                    </article>
+                    <article class="group border border-outline-variant/10 p-6 flex flex-col gap-6 hover:border-primary/40 transition">
+                        <div class="relative aspect-square overflow-hidden">
+                            <img src="resources/releases/Rainative/Rainative专辑封面.png" alt="Rainative release" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-70"></div>
+                            <span class="absolute bottom-4 left-4 font-mono text-[10px] tracking-[0.3em] text-white uppercase">nm // 079</span>
+                        </div>
+                        <div class="space-y-2">
+                            <h3 class="text-2xl font-headline tracking-tight text-white">Rainative</h3>
+                            <p class="font-mono text-sm text-on-surface-variant/80">Film-inspired drum &amp; bass suite, performed live with reactive LED architecture.</p>
+                        </div>
+                        <div class="font-mono text-[11px] uppercase tracking-[0.3em] text-primary">view project →</div>
+                    </article>
+                    <article class="group border border-outline-variant/10 p-6 flex flex-col gap-6 hover:border-primary/40 transition">
+                        <div class="relative aspect-square overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80" alt="Studio performance" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-70"></div>
+                            <span class="absolute bottom-4 left-4 font-mono text-[10px] tracking-[0.3em] text-white uppercase">nm // field</span>
+                        </div>
+                        <div class="space-y-2">
+                            <h3 class="text-2xl font-headline tracking-tight text-white">Field Study</h3>
+                            <p class="font-mono text-sm text-on-surface-variant/80">Multi-channel performance recorded within brutalist architecture, 42 min.</p>
+                        </div>
+                        <div class="font-mono text-[11px] uppercase tracking-[0.3em] text-primary">view project →</div>
+                    </article>
+                </div>
+            </section>
+            <!-- Studio Notes -->
+            <section class="px-6 md:px-12 max-w-[1440px] mx-auto py-20 grid grid-cols-1 lg:grid-cols-2 gap-16 border-t border-outline-variant/20">
+                <div class="space-y-6">
+                    <p class="font-mono text-[11px] tracking-[0.4em] text-primary uppercase">studio memo</p>
+                    <h3 class="text-4xl font-headline tracking-tight text-white">Designing sound for contemporary spaces.</h3>
+                    <p class="font-mono text-sm text-on-surface-variant/80 leading-relaxed">
+                        From museums in Beijing to kinetic fashion runways in Berlin, NEUROMANCER blends research, analog circuitry, and choreography. Each commission includes bespoke system design, tactile renderings, and a living archive for curators.
                     </p>
                 </div>
-                <!-- Terminal Coordinates (Corner) -->
-                <div
-                    class="absolute bottom-12 right-12 text-right hidden lg:block font-mono text-[10px] text-on-surface-variant/40 space-y-1">
-                    <p class style>LAT: 35.6895° N</p>
-                    <p class style>LON: 139.6917° E</p>
-                    <p class style>UPTIME: 14:22:09:51</p>
-                </div>
-            </section>
-            <!-- Featured Releases -->
-            <section class="px-6 md:px-12 py-24 max-w-[1440px] mx-auto">
-                <div
-                    class="flex justify-between items-end mb-16 border-b border-outline-variant/10 pb-4">
-                    <h2
-                        class="font-headline text-2xl tracking-tighter lowercase font-medium"
-                        style>FEATURED_RELEASES</h2>
-                    <span
-                        class="font-mono text-[10px] text-on-surface-variant uppercase tracking-widest"
-                        style>TOTAL_RECORDS: 024</span>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24">
-                    <!-- Record 01 -->
-                    <div class="group flex flex-col gap-6">
-                        <div
-                            class="relative aspect-square ghost-border overflow-hidden bg-surface-container-low transition-all duration-500 hover:border-primary/40">
-                            <img alt="Album art for Void Walker"
-                                class="w-full h-full object-cover desaturate-[0.4] group-hover:scale-105 transition-transform duration-700"
-                                data-alt="Minimalist abstract textures resembling dark liquid mercury or melting obsidian, high contrast, studio lighting, archival specimen look"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXCS3NuuT94uJWgDPlSZCHa56mQ52QnWuR4-HV9mJk0K9FzEzNtDBYsxz3ePFZ8dr4_lPUlBYG2af5OJT5NvL6-tnrQiPkDnjkRJJnBv1m41HyZvGhAP5vfBrq5gC6eAAfnoKOBjfOgh9In5sHKRJU88TGmmpFQ6bX0_AUWdtA5AD0gez9XhPzNFPvZYv0miBQyi0NYQcmrWzWssQ6ezgywGmezkvhPwyKOHgfq6N4gdHVgKhi4sYufw3afiPVGt4hipevfL3aSoI3"
-                                style>
-                            <div
-                                class="absolute bottom-4 right-4 bg-background/80 backdrop-blur-md px-3 py-1 border border-outline-variant/20">
-                                <span
-                                    class="font-mono text-[10px] text-on-surface-variant uppercase tracking-widest"
-                                    style>FILE_ID: NM_082</span>
-                            </div>
-                        </div>
-                        <div class="flex justify-between items-start">
-                            <div>
-                                <h3
-                                    class="text-xl font-headline font-semibold tracking-tighter lowercase"
-                                    style>Void Walker</h3>
-                                <p
-                                    class="text-sm text-on-surface-variant font-mono"
-                                    style>11.02.2024 // 128 BPM</p>
-                            </div>
-                            <button
-                                class="bg-primary text-on-primary px-4 py-2 font-mono text-xs uppercase tracking-widest hover:bg-primary-dim transition-colors"
-                                style>Listen</button>
-                        </div>
+                <div class="space-y-8">
+                    <div class="border border-outline-variant/20 p-6 hover:border-primary/40 transition">
+                        <p class="font-mono text-[10px] uppercase tracking-[0.4em] text-on-surface-variant">capabilities</p>
+                        <ul class="mt-4 space-y-2 font-mono text-sm text-white/80">
+                            <li>01 — generative composition &amp; scoring</li>
+                            <li>02 — spatial + ambisonic installation</li>
+                            <li>03 — artifact-grade mastering</li>
+                            <li>04 — research residencies &amp; lectures</li>
+                        </ul>
                     </div>
-                    <!-- Record 02 -->
-                    <div class="group flex flex-col gap-6 md:mt-32">
-                        <div
-                            class="relative aspect-square ghost-border overflow-hidden bg-surface-container-low transition-all duration-500 hover:border-primary/40">
-                            <img alt="Album art for Static Pulse"
-                                class="w-full h-full object-cover desaturate-[0.4] group-hover:scale-105 transition-transform duration-700"
-                                data-alt="Highly detailed close-up of rusted industrial metal and orange-tinted wires under dark shadows, high resolution technical macro photography"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYEVIzYeIrmxGrZRP-jrI7HwNHmFO6S7obcqnsdHPK5FnqERUJfNKeRtLyIF3yq8NYDSeIdOOHUP9F0AVJ4FMXqFMUMVpqlLEPySp4lUXM5S4DE8sieWNZoJMa8gy-ZwbniY4VqEc3pKgo6REEF5LDp_VCdorwacBzxfm_SHloSN3FDbpbpfrXzdGRNsiglw-I8PXmJyVBOULhBV5Lwc36sI-CYQvKYhT_Ic-0f4ndnwuE8za4V4YUklngDmGkSkD6Q5jjOquPB2Yb"
-                                style>
-                            <div
-                                class="absolute bottom-4 right-4 bg-background/80 backdrop-blur-md px-3 py-1 border border-outline-variant/20">
-                                <span
-                                    class="font-mono text-[10px] text-on-surface-variant uppercase tracking-widest"
-                                    style>BPM_INDEX: 174</span>
-                            </div>
+                    <div class="border border-outline-variant/20 p-6 hover:border-primary/40 transition flex items-center justify-between">
+                        <div>
+                            <p class="font-mono text-[10px] uppercase tracking-[0.4em] text-on-surface-variant">open channel</p>
+                            <p class="text-white font-headline text-2xl mt-2">Inquire_Terminal</p>
                         </div>
-                        <div class="flex justify-between items-start">
-                            <div>
-                                <h3
-                                    class="text-xl font-headline font-semibold tracking-tighter lowercase"
-                                    style>Static Pulse</h3>
-                                <p
-                                    class="text-sm text-on-surface-variant font-mono"
-                                    style>28.01.2024 // OST_004</p>
-                            </div>
-                            <button
-                                class="bg-primary text-on-primary px-4 py-2 font-mono text-xs uppercase tracking-widest hover:bg-primary-dim transition-colors"
-                                style>Listen</button>
-                        </div>
+                        <a href="contact.html" class="font-mono text-[11px] uppercase tracking-[0.3em] text-primary">→</a>
                     </div>
                 </div>
             </section>
-            <!-- Commissions Banner -->
-            <section class="px-6 md:px-12 py-24 max-w-[1440px] mx-auto">
-                <div
-                    class="relative w-full bg-surface-container-low p-12 border border-outline-variant/10 overflow-hidden">
-                    <!-- Ambient Glow State -->
-                    <div
-                        class="absolute -right-20 -top-20 w-64 h-64 bg-primary/5 blur-[100px]"></div>
-                    <div
-                        class="relative z-10 flex flex-col md:flex-row justify-between items-center gap-8">
-                        <div class="text-center md:text-left">
-                            <div
-                                class="flex items-center gap-3 mb-2 justify-center md:justify-start">
-                                <span
-                                    class="w-2 h-2 bg-primary rounded-full animate-pulse shadow-[0_0_10px_rgba(150,212,175,0.8)]"></span>
-                                <span
-                                    class="font-mono text-xs text-primary tracking-[0.4em] uppercase"
-                                    style>Status: Live</span>
-                            </div>
-                            <h2
-                                class="text-4xl md:text-5xl font-headline font-bold tracking-tighter uppercase text-tertiary"
-                                style>COMMISSIONS: OPEN</h2>
-                            <p
-                                class="text-on-surface-variant font-mono text-sm mt-4 opacity-70"
-                                style>custom sound design / analog mastering /
-                                archival services</p>
-                        </div>
-                        <button
-                            class="border border-primary text-primary px-10 py-4 font-mono text-xs uppercase tracking-[0.3em] hover:bg-primary/10 transition-all duration-300"
-                            style>
-                            Inquire_Terminal
-                        </button>
-                    </div>
-                </div>
-            </section>
-            <!-- Metadata Grid / Index -->
-            <!-- <section class="px-6 md:px-12 py-12 max-w-[1440px] mx-auto">
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 opacity-40">
-                    <div
-                        class="border-t border-outline-variant/20 pt-4 font-mono text-[10px] space-y-1">
-                        <p class="text-on-surface-variant" style>NODE_01</p>
-                        <p class="text-primary" style>ACTIVE</p>
-                    </div>
-                    <div
-                        class="border-t border-outline-variant/20 pt-4 font-mono text-[10px] space-y-1">
-                        <p class="text-on-surface-variant" style>ENCRYPTION</p>
-                        <p class style>AES-256</p>
-                    </div>
-                    <div
-                        class="border-t border-outline-variant/20 pt-4 font-mono text-[10px] space-y-1">
-                        <p class="text-on-surface-variant" style>BITRATE</p>
-                        <p class style>320 KBPS</p>
-                    </div>
-                    <div
-                        class="border-t border-outline-variant/20 pt-4 font-mono text-[10px] space-y-1">
-                        <p class="text-on-surface-variant" style>CONNECTION</p>
-                        <p class style>STABLE</p>
-                    </div>
-                </div>
-            </section> -->
         </main>
         <!-- Footer -->
         <footer class="w-full py-8 border-t border-[#484848]/20 bg-[#0e0e0e]">

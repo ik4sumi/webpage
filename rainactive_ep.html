@@ -1,219 +1,316 @@
 <!DOCTYPE html>
 
 <html class="dark" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>NEUROMANCER // ARCHIVE</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;family=JetBrains+Mono:wght@300;400&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"secondary-dim": "#9b9e9f", "inverse-surface": "#fbf9f8", "outline-variant": "#464849", "surface-container-highest": "#242627", "on-secondary": "#1d2121", "error-container": "#7f2927", "primary-dim": "#b1babc", "on-primary": "#394243", "surface-container-low": "#121414", "surface-dim": "#0e0e0e", "surface-bright": "#2a2d2d", "on-primary-fixed": "#384143", "on-tertiary-container": "#3e5868", "inverse-on-surface": "#555555", "primary-fixed": "#dbe4e6", "inverse-primary": "#576162", "on-secondary-fixed-variant": "#595c5d", "on-error": "#490106", "surface-container-high": "#1e2020", "tertiary-container": "#d0ecff", "on-surface-variant": "#aaabab", background: "#0e0e0e", "on-secondary-fixed": "#3c4040", "on-primary-container": "#c8d2d4", "tertiary-fixed": "#d0ecff", "surface-tint": "#bfc8ca", "surface-container": "#181a1a", surface: "#0e0e0e", "error-dim": "#bb5551", outline: "#747676", "on-surface": "#e5e5e6", "secondary-container": "#393c3d", error: "#ee7d77", "on-background": "#e5e5e6", secondary: "#9b9e9f", "surface-container-lowest": "#000000", primary: "#bfc8ca", "on-tertiary-fixed": "#2c4655", tertiary: "#eff8ff", "on-tertiary": "#466170", "tertiary-dim": "#c2def0", "secondary-fixed-dim": "#d2d5d5", "secondary-fixed": "#e1e3e3", "surface-variant": "#242627", "on-secondary-container": "#bdc0c0", "primary-fixed-dim": "#ccd6d8", "on-error-container": "#ff9993", "on-primary-fixed-variant": "#545d5f", "tertiary-fixed-dim": "#c2def0", "primary-container": "#3f484a", "on-tertiary-fixed-variant": "#486272"}, borderRadius: {DEFAULT: "0px", lg: "0px", xl: "0px", full: "0px"}, fontFamily: {headline: ["Space Grotesk"], body: ["Inter"], label: ["Space Grotesk"], mono: ["JetBrains Mono"], display: "Space Grotesk"}}}};</script>
-<style>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;family=JetBrains+Mono:wght@300;400;500&amp;display=swap"
+            rel="stylesheet" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+            rel="stylesheet" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+            rel="stylesheet" />
+        <script
+            src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <script
+            id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"secondary-dim": "#9b9e9f", "inverse-surface": "#fbf9f8", "outline-variant": "#464849", "surface-container-highest": "#242627", "on-secondary": "#1d2121", "error-container": "#7f2927", "primary-dim": "#b1babc", "on-primary": "#394243", "surface-container-low": "#121414", "surface-dim": "#0e0e0e", "surface-bright": "#2a2d2d", "on-primary-fixed": "#384143", "on-tertiary-container": "#3e5868", "inverse-on-surface": "#555555", "primary-fixed": "#dbe4e6", "inverse-primary": "#576162", "on-secondary-fixed-variant": "#595c5d", "on-error": "#490106", "surface-container-high": "#1e2020", "tertiary-container": "#d0ecff", "on-surface-variant": "#aaabab", background: "#0e0e0e", "on-secondary-fixed": "#3c4040", "on-primary-container": "#c8d2d4", "tertiary-fixed": "#d0ecff", "surface-tint": "#bfc8ca", "surface-container": "#181a1a", surface: "#0e0e0e", "error-dim": "#bb5551", outline: "#747676", "on-surface": "#e5e5e6", "secondary-container": "#393c3d", error: "#ee7d77", "on-background": "#e5e5e6", secondary: "#9b9e9f", "surface-container-lowest": "#000000", primary: "#bfc8ca", "on-tertiary-fixed": "#2c4655", tertiary: "#eff8ff", "on-tertiary": "#466170", "tertiary-dim": "#c2def0", "secondary-fixed-dim": "#d2d5d5", "secondary-fixed": "#e1e3e3", "surface-variant": "#242627", "on-secondary-container": "#bdc0c0", "primary-fixed-dim": "#ccd6d8", "on-error-container": "#ff9993", "on-primary-fixed-variant": "#545d5f", "tertiary-fixed-dim": "#c2def0", "primary-container": "#3f484a", "on-tertiary-fixed-variant": "#486272"}, borderRadius: {DEFAULT: "0px", lg: "0px", xl: "0px", full: "0px"}, fontFamily: {headline: ["Space Grotesk"], body: ["Inter"], label: ["Space Grotesk"], mono: ["JetBrains Mono"], display: "Space Grotesk"}}}};</script>
+        <style>
         .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            font-size: 18px;
         }
         body {
             background-color: #0e0e0e;
             color: #e7e5e5;
+            -webkit-font-smoothing: antialiased;
         }
         .ghost-border {
             outline: 1px solid rgba(72, 72, 72, 0.2);
         }
-        .archive-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        .ghost-border:hover {
+            outline-color: rgba(150, 212, 175, 0.3);
         }
-        .nav-link { position: relative; display: inline-block; color: #ffffff; text-transform: lowercase; letter-spacing: 0.15em; transition: letter-spacing 0.3s ease; }
-        .nav-link::after { content: ""; position: absolute; left: 0; bottom: -6px; width: 100%; height: 1px; background: rgba(255,255,255,0.7); transform: scaleX(0); transform-origin: left; transition: transform 0.3s ease; }
-        .nav-link:hover { letter-spacing: 0.3em; }
-        .nav-link:hover::after, .nav-link.active::after { transform: scaleX(1); }
     </style>
-</head>
-<body class="font-body selection:bg-primary selection:text-on-primary">
-<!-- TopNavBar -->
-<header class="fixed top-0 w-full z-50 bg-transparent border-b border-[#484848]/20 h-20 flex items-center backdrop-blur-sm">
-<div class="flex justify-between items-center px-6 w-full max-w-[1440px] mx-auto">
-<div class="font-['Space_Grotesk'] font-bold text-2xl tracking-tight text-[#ffffff] uppercase" style="">NEUROMANCER</div>
-<nav class="flex flex-wrap items-center gap-8 text-base">
-                    <a class="nav-link font-['Space_Grotesk']" href="index.html" style="">HOME</a>
-                    <a class="nav-link font-['Space_Grotesk'] active" href="releases.html" style="">RELEASES</a>
-                    <a class="nav-link font-['Space_Grotesk']" href="about.html" style="">ABOUT</a>
-                    <a class="nav-link font-['Space_Grotesk']" href="contact.html" style="">CONTACT</a>
-</nav>
-</div>
-</header>
-<main class="pt-32 pb-32 max-w-[1440px] mx-auto px-6 lg:px-10">
-<!-- Header Section -->
-<header class="mb-16 md:mb-24 flex flex-col md:flex-row md:items-end justify-between gap-8 border-b border-outline-variant/10 pb-12">
-<div class="max-w-2xl">
-<div class="flex items-center gap-2 mb-4">
-<span class="w-2 h-2 bg-primary"></span>
-<span class="font-mono text-[10px] tracking-[0.3em] text-on-surface-variant uppercase">Archive_Index_v4.0</span>
-</div>
-<h1 class="text-5xl md:text-7xl font-headline font-light tracking-tighter leading-none lowercase text-on-surface">
-                    the music <span class="text-primary italic font-medium">releases</span>
-</h1>
-</div>
-<div class="font-mono text-[11px] text-on-surface-variant space-y-1 text-right">
-<p>TOTAL_ENTRIES: 12</p>
-<p>LAST_SYNC: 2024.10.12</p>
-<p>PROTOCOL: DECENTRALIZED_AUDIO</p>
-</div>
-</header>
-<!-- Archive Grid -->
-<section class="archive-grid gap-y-16 gap-x-px md:gap-x-12">
-<!-- Release Item 01 -->
-<div class="group cursor-crosshair">
-<div class="relative overflow-hidden border border-outline-variant/20 mb-6 bg-surface-container-low aspect-square">
-<img class="w-full h-full object-cover desaturate-[20%] group-hover:scale-105 transition-transform duration-700" data-alt="abstract minimalist black and white electronic music album cover with geometric topography lines and grainy texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSYHLTBPBJP5Vpl4yX7n2fvNHpzUo554VTeHrsCPwXSV6rUdDgqCVTozm40MalhE-v-RmNFc6OiBOTAHf4Orool9wlinGGwnI3FgAf67qEl_kM1qnvl4IJGDqBXia-W_RadTJmOfR906wbgQwZiMaPW62k5HIyoG8Sg8RLIAWj0HW6S6mdm2KqENXmY4zGKGUfw-uiJuFpuz6-MvIBp5Y9avT41fFtdht43Y66j-WnEtmNJRoEvsnKTZQqO-v4zM9HJuUgRtrkTGIM"/>
-<div class="absolute bottom-2 right-2">
-<span class="font-mono text-[9px] bg-background/80 backdrop-blur-sm px-2 py-1 text-on-surface-variant">FILE_ID: NM_082</span>
-</div>
-</div>
-<div class="flex flex-col gap-1">
-<div class="flex justify-between items-start">
-<h3 class="font-headline text-lg tracking-tight lowercase text-on-surface group-hover:text-primary transition-colors">void signals</h3>
-<span class="font-mono text-[11px] text-on-surface-variant">2024</span>
-</div>
-<div class="flex gap-3 items-center">
-<span class="font-mono text-[10px] text-primary/70 uppercase tracking-widest">ambient</span>
-<span class="w-1 h-1 bg-outline-variant/40"></span>
-<span class="font-mono text-[10px] text-primary/70 uppercase tracking-widest">industrial</span>
-</div>
-</div>
-</div>
-<!-- Release Item 02 -->
-<div class="group cursor-crosshair">
-<div class="relative overflow-hidden border border-outline-variant/20 mb-6 bg-surface-container-low aspect-square">
-<img class="w-full h-full object-cover desaturate-[20%] group-hover:scale-105 transition-transform duration-700" data-alt="minimalist deep green and charcoal abstract gradient representing dark electronic soundscapes with subtle noise" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuhU8xPd86dBVXRCDMpXKmrtllSk54xM1rGiwqAgKxjsPB1qRFU4lp843MgX0sKLuG2a21sSXkfR5QyxmM3_0Z0NSk5HG3dH61r1B9e6nIAYCCmmU0j2C28zQCnqSgJuAhwvJJ4dosEg4_JhuvhwpHKdA_UVVkyoC0g64sBI5jvBsJA48XrQINhjMJ8xqS7jXkSi9JOpCTihC_wTsJhiEElGIjBaHJO7QZqiTIZJLXGrR95sCMHlKrRyp0qvRQAAydBiHmXEqTUTyE"/>
-<div class="absolute bottom-2 right-2">
-<span class="font-mono text-[9px] bg-background/80 backdrop-blur-sm px-2 py-1 text-on-surface-variant">FILE_ID: NM_079</span>
-</div>
-</div>
-<div class="flex flex-col gap-1">
-<div class="flex justify-between items-start">
-<h3 class="font-headline text-lg tracking-tight lowercase text-on-surface group-hover:text-primary transition-colors">phosphor traces</h3>
-<span class="font-mono text-[11px] text-on-surface-variant">2023</span>
-</div>
-<div class="flex gap-3 items-center">
-<span class="font-mono text-[10px] text-primary/70 uppercase tracking-widest">techno</span>
-<span class="w-1 h-1 bg-outline-variant/40"></span>
-<span class="font-mono text-[10px] text-primary/70 uppercase tracking-widest">glitch</span>
-</div>
-</div>
-</div>
-<!-- Release Item 03 -->
-<div class="group cursor-crosshair">
-<div class="relative overflow-hidden border border-outline-variant/20 mb-6 bg-surface-container-low aspect-square">
-<img class="w-full h-full object-cover desaturate-[20%] group-hover:scale-105 transition-transform duration-700" data-alt="architectural close-up of Brutalist concrete structure in low light with harsh shadows for a dark electronic album" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbCdMgF2kLR3Om73ohE6AazyDLmz1hpFCglc80hRTh1fGmtEOKctrzi4qZvEA5Xhp-FSX37vAkzqAXp_mcerOduY6bQ8Pw1XhooDjKoAwIqFtKAJf3MiI2IspB6I8XvPg-IWBYtWC7hsFhUxjDy3cjoyCxfKYswYpHOioxf64ardn09MAqY7p59uww6w7drSisKuSOfgaVVodChOAEGDsHZrxvLWclVItZIkFHAfTci_RwmEwDSFXKB_03-ayFSqe2e5o8iW-03xgE"/>
-<div class="absolute bottom-2 right-2">
-<span class="font-mono text-[9px] bg-background/80 backdrop-blur-sm px-2 py-1 text-on-surface-variant">FILE_ID: NM_074</span>
-</div>
-</div>
-<div class="flex flex-col gap-1">
-<div class="flex justify-between items-start">
-<h3 class="font-headline text-lg tracking-tight lowercase text-on-surface group-hover:text-primary transition-colors">monolith echo</h3>
-<span class="font-mono text-[11px] text-on-surface-variant">2023</span>
-</div>
-<div class="flex gap-3 items-center">
-<span class="font-mono text-[10px] text-primary/70 uppercase tracking-widest">drone</span>
-<span class="w-1 h-1 bg-outline-variant/40"></span>
-<span class="font-mono text-[10px] text-primary/70 uppercase tracking-widest">experimental</span>
-</div>
-</div>
-</div>
-<!-- Release Item 04 -->
-<div class="group cursor-crosshair">
-<div class="relative overflow-hidden border border-outline-variant/20 mb-6 bg-surface-container-low aspect-square">
-<img class="w-full h-full object-cover desaturate-[20%] group-hover:scale-105 transition-transform duration-700" data-alt="blurred motion of city lights at night transformed into a dark green and black abstract blur for techno album" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCt79trfFEZZciLiEM2FqZU-mfPMxzUI3JdJqBC1pM9OyuVQMmkH4uTnJpLK4SxNzdM3PwxxweAxrHZv4DCxOlYFegk0wzMYrRS1uhHmbsZ2WNjH5uBqM4C37dG99ikdMEK_SSQpped9CrOXjsYjLZJhEVqDP1R_xLJrlkkaglv3buDeWyY2_kTrpYWzBRmpANx6oEKUbgIIysll7qe9MAzriz6jpVUtrdy7sXHB46Dct-8DLmeGENtaIK5CgDVGLiPx4PU3gCpibXj"/>
-<div class="absolute bottom-2 right-2">
-<span class="font-mono text-[9px] bg-background/80 backdrop-blur-sm px-2 py-1 text-on-surface-variant">FILE_ID: NM_068</span>
-</div>
-</div>
-<div class="flex flex-col gap-1">
-<div class="flex justify-between items-start">
-<h3 class="font-headline text-lg tracking-tight lowercase text-on-surface group-hover:text-primary transition-colors">kinetic static</h3>
-<span class="font-mono text-[11px] text-on-surface-variant">2022</span>
-</div>
-<div class="flex gap-3 items-center">
-<span class="font-mono text-[10px] text-primary/70 uppercase tracking-widest">dub-techno</span>
-</div>
-</div>
-</div>
-<!-- Release Item 05 -->
-<div class="group cursor-crosshair">
-<div class="relative overflow-hidden border border-outline-variant/20 mb-6 bg-surface-container-low aspect-square">
-<img class="w-full h-full object-cover desaturate-[20%] group-hover:scale-105 transition-transform duration-700" data-alt="overhead shot of vintage motherboard components with dark cinematic lighting and subtle green glow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLZO0bOE6atBF52eLKSlIlbutaNFs0GzaeWEsMOqjP7Z-Hh2ilinTsgmR824OAud_hs5ypsYSY68Nox0v9Dox4IP5hYnt99U1rHVHDyBCdItPvvrk8lacUYK0WQfqlBoXFqqaLUqjCs0H8v7P09C7UbQWHpYRGaYLdsUOoxa49QurKzDy-u_O_jkY9iuWV-tWogO2XbcZWhVyM8LYILnZSkMWKCHs5PgsszCjP_UATyaR3ZXrK45MxK0xb36pYq1KKxsvrhQtoAd1u"/>
-<div class="absolute bottom-2 right-2">
-<span class="font-mono text-[9px] bg-background/80 backdrop-blur-sm px-2 py-1 text-on-surface-variant">FILE_ID: NM_061</span>
-</div>
-</div>
-<div class="flex flex-col gap-1">
-<div class="flex justify-between items-start">
-<h3 class="font-headline text-lg tracking-tight lowercase text-on-surface group-hover:text-primary transition-colors">logic core</h3>
-<span class="font-mono text-[11px] text-on-surface-variant">2022</span>
-</div>
-<div class="flex gap-3 items-center">
-<span class="font-mono text-[10px] text-primary/70 uppercase tracking-widest">idm</span>
-<span class="w-1 h-1 bg-outline-variant/40"></span>
-<span class="font-mono text-[10px] text-primary/70 uppercase tracking-widest">electro</span>
-</div>
-</div>
-</div>
-<!-- Release Item 06 -->
-<div class="group cursor-crosshair">
-<div class="relative overflow-hidden border border-outline-variant/20 mb-6 bg-surface-container-low aspect-square">
-<img class="w-full h-full object-cover desaturate-[20%] group-hover:scale-105 transition-transform duration-700" data-alt="satellite imagery of a dark ocean coast at night with bioluminescent waves for deep electronic music album" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvreF_aS0pM6Kf4XC_fLy_lLcZpX9tr-l_IhY5gMdUDvrom3jrCT3dp4-NwqtF7WMOugghrtzpYfqzKfGCZSTyhRjFj9Hv-V7flB2Nmg0LVP9SHuheH709N3OT7ZJxs_uIScHQxe7sqY8wZCBZ-0-y31PdtzDPZYDFbwl_HNYqhBCSZOsK_-jcLg8Wlav_epT22ZxzjiOHlLkHGD5pEkvZpfwvCrgtSVQzFxZchI0AOqJCBQR8Ajyg5lXOfY0skkntMVPGLZ3WkVb1"/>
-<div class="absolute bottom-2 right-2">
-<span class="font-mono text-[9px] bg-background/80 backdrop-blur-sm px-2 py-1 text-on-surface-variant">FILE_ID: NM_055</span>
-</div>
-</div>
-<div class="flex flex-col gap-1">
-<div class="flex justify-between items-start">
-<h3 class="font-headline text-lg tracking-tight lowercase text-on-surface group-hover:text-primary transition-colors">liquid terminal</h3>
-<span class="font-mono text-[11px] text-on-surface-variant">2021</span>
-</div>
-<div class="flex gap-3 items-center">
-<span class="font-mono text-[10px] text-primary/70 uppercase tracking-widest">downtempo</span>
-</div>
-</div>
-</div>
-</section>
-<!-- Pagination / Index Status -->
-<div class="mt-24 pt-12 border-t border-outline-variant/10 flex flex-col md:flex-row justify-between items-center gap-6">
-<div class="flex gap-4 items-center">
-<button class="ghost-border px-6 py-2 font-mono text-[11px] text-on-surface-variant hover:text-primary hover:outline-primary transition-all">PREV_PAGE</button>
-<div class="font-mono text-[11px] text-primary px-4 border-x border-outline-variant/20">01 / 02</div>
-<button class="ghost-border px-6 py-2 font-mono text-[11px] text-on-surface-variant hover:text-primary hover:outline-primary transition-all">NEXT_PAGE</button>
-</div>
-<div class="flex items-center gap-2">
-<div class="w-40 h-[1px] bg-outline-variant/20"></div>
-<span class="font-mono text-[10px] text-on-surface-variant/50 tracking-tighter">END_OF_INDEX</span>
-</div>
-</div>
-</main>
-<!-- Footer -->
-<footer class="w-full py-8 border-t border-[#484848]/20 bg-[#0e0e0e]">
-<div class="flex flex-col md:flex-row justify-between items-center px-10 w-full gap-4 max-w-[1440px] mx-auto">
-<div class="font-mono text-[10px] uppercase tracking-widest text-[#acabaa]">
-                SYSTEM_STATUS: OPERATIONAL // © 2024 ARCHIVE_PROTOCOL
+    </head>
+    <body
+        class="font-body selection:bg-primary-container selection:text-on-primary-container">
+        <nav
+            class="fixed top-0 w-full z-50 bg-[#0e0e0e] border-b border-[#484848]/20 h-16">
+            <div
+                class="flex justify-between items-center px-6 h-full w-full max-w-[1440px] mx-auto">
+                <div
+                    class="font-['Space_Grotesk'] font-bold tracking-tighter text-[#96d4af] uppercase text-lg">
+                    NEUROMANCER
+                </div>
+                <div class="hidden md:flex gap-8 items-center">
+                    <a
+                        class="text-[#acabaa] font-mono hover:text-[#96d4af] transition-colors font-['Space_Grotesk'] tracking-tighter lowercase text-sm"
+                        href="#">HOME</a>
+                    <a
+                        class="text-[#96d4af] font-bold border-b border-[#96d4af] font-['Space_Grotesk'] tracking-tighter lowercase text-sm"
+                        href="#">RELEASES</a>
+                    <a
+                        class="text-[#acabaa] font-mono hover:text-[#96d4af] transition-colors font-['Space_Grotesk'] tracking-tighter lowercase text-sm"
+                        href="#">ABOUT</a>
+                    <a
+                        class="text-[#acabaa] font-mono hover:text-[#96d4af] transition-colors font-['Space_Grotesk'] tracking-tighter lowercase text-sm"
+                        href="#">CONTACT</a>
+                </div>
+                <div
+                    class="text-[#96d4af] font-mono text-xs tracking-widest opacity-80">
+                    00:00:00_UTC
+                </div>
             </div>
-<div class="flex gap-8">
-<a class="font-mono text-[10px] uppercase tracking-widest text-[#acabaa] hover:text-[#96d4af] underline decoration-dotted transition-opacity duration-500" href="#">TERMINAL</a>
-<a class="font-mono text-[10px] uppercase tracking-widest text-[#acabaa] hover:text-[#96d4af] underline decoration-dotted transition-opacity duration-500" href="#">INDEX</a>
-<a class="font-mono text-[10px] uppercase tracking-widest text-[#acabaa] hover:text-[#96d4af] underline decoration-dotted transition-opacity duration-500" href="#">LOGS</a>
-</div>
-</div>
-</footer>
-<!-- Playback Status Bar (Metadata detail) -->
-<div class="fixed bottom-0 left-0 w-full h-1 bg-surface-container-highest z-[60]">
-<div class="h-full bg-gradient-to-r from-primary to-primary-container w-[64%]"></div>
-</div>
-<div class="fixed bottom-4 left-6 hidden lg:flex items-center gap-4 z-[60]">
-<div class="flex flex-col gap-0.5">
-<span class="font-mono text-[9px] text-primary/60 uppercase">Now_Browsing</span>
-<span class="font-mono text-[11px] text-on-surface tracking-tighter uppercase">Category: Full_Length_LPs</span>
-</div>
-</div>
-</body></html>
+        </nav>
+        <main class="pt-24 pb-32 max-w-screen-xl mx-auto px-6 md:px-12">
+            <section class="grid grid-cols-1 md:grid-cols-12 gap-12 mb-20">
+                <div class="md:col-span-8 group relative">
+                    <div
+                        class="ghost-border p-1 bg-surface-container-low transition-all duration-700">
+                        <img alt="NEUROMANCER ALBUM COVER"
+                            class="w-full aspect-square object-cover grayscale-[0.2] group-hover:grayscale-0 transition-all duration-700"
+                            data-alt="Abstract dark album cover with geometric emerald green light patterns on deep charcoal textured background, minimalist archival style"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAy_ynPfnvkIuxVRt_2dzSTVPUF1_BzIQ62RgWsPeqc0Msj6E1EkTm_7AddRm874gTQaqwZ0xdkuZd3iAn2Li6Z15oKD-evKhNYu2uU6qTyHDwzq5mxbWa6CZQXKvgObqJQ2OS7pkfLXd4pQcefiwdNTck9P5hM1IyBR_Wyad2dW_64-m23Vi3fUCW9C3rrLcnZyBXsKV6zIev7VIB2KwZhz8c-S5o5hfixBJjo3egZB7rxpZvShtu3WCLlPuP9541lDujbIyCNzPLi" />
+                    </div>
+                    <div
+                        class="absolute bottom-4 right-4 bg-surface/80 backdrop-blur-md px-3 py-1 border border-outline-variant/20">
+                        <span
+                            class="font-mono text-[10px] text-on-surface-variant tracking-tighter uppercase">SPECIMEN_REF:
+                            NM-041-A</span>
+                    </div>
+                </div>
+                <div class="md:col-span-4 flex flex-col justify-end gap-6">
+                    <div>
+                        <span
+                            class="font-mono text-[11px] text-primary tracking-[0.2em] mb-2 block">ENTRY_ID
+                            // 0042</span>
+                        <h1
+                            class="font-headline text-5xl md:text-6xl font-bold tracking-tighter text-on-surface leading-none mb-4">
+                            VOID_STATIC
+                        </h1>
+                        <p
+                            class="font-mono text-sm text-on-surface-variant leading-relaxed max-w-xs">
+                            An exploration of recursive silence and
+                            electromagnetic artifacts. Captured in the
+                            subterranean sector 7.
+                        </p>
+                    </div>
+                    <div class="flex flex-col gap-3">
+                        <button
+                            class="bg-primary text-on-primary py-3 px-6 flex justify-between items-center hover:bg-primary-dim transition-all cursor-crosshair">
+                            <span
+                                class="font-mono text-xs font-bold uppercase tracking-widest">BUY_PHYSICAL</span>
+                            <span
+                                class="material-symbols-outlined">shopping_cart</span>
+                        </button>
+                        <div class="grid grid-cols-3 gap-2">
+                            <a
+                                class="ghost-border bg-surface-container-low p-3 flex items-center justify-center hover:text-primary transition-colors"
+                                href="#">
+                                <span
+                                    class="material-symbols-outlined">radio</span>
+                            </a>
+                            <a
+                                class="ghost-border bg-surface-container-low p-3 flex items-center justify-center hover:text-primary transition-colors"
+                                href="#">
+                                <span
+                                    class="material-symbols-outlined">sound_detection_dog_barking</span>
+                            </a>
+                            <a
+                                class="ghost-border bg-surface-container-low p-3 flex items-center justify-center hover:text-primary transition-colors"
+                                href="#">
+                                <span
+                                    class="material-symbols-outlined">play_circle</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="grid grid-cols-1 md:grid-cols-12 gap-12">
+                <div class="md:col-span-7">
+                    <div class="flex items-center gap-4 mb-8">
+                        <span
+                            class="font-mono text-[10px] text-primary-dim px-2 py-0.5 border border-primary-container">FILE_INFO</span>
+                        <div
+                            class="h-[1px] flex-grow bg-outline-variant/20"></div>
+                        <span
+                            class="font-mono text-[10px] text-on-surface-variant uppercase">TRACK_LISTING</span>
+                    </div>
+                    <div class="space-y-1">
+                        <div
+                            class="flex items-center justify-between py-4 group hover:bg-surface-container-low px-4 transition-colors">
+                            <div class="flex gap-6 items-center">
+                                <span
+                                    class="font-mono text-[11px] text-on-surface-variant">01</span>
+                                <span
+                                    class="font-headline text-lg tracking-tight group-hover:text-primary transition-colors">Fragmented
+                                    Memory</span>
+                            </div>
+                            <div class="flex gap-8 items-center">
+                                <span
+                                    class="font-mono text-[11px] text-on-surface-variant">04:22</span>
+                                <span
+                                    class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors">play_arrow</span>
+                            </div>
+                        </div>
+                        <div
+                            class="flex items-center justify-between py-4 group hover:bg-surface-container-low px-4 transition-colors">
+                            <div class="flex gap-6 items-center">
+                                <span
+                                    class="font-mono text-[11px] text-on-surface-variant">02</span>
+                                <span
+                                    class="font-headline text-lg tracking-tight group-hover:text-primary transition-colors">Terminal
+                                    Horizon</span>
+                            </div>
+                            <div class="flex gap-8 items-center">
+                                <span
+                                    class="font-mono text-[11px] text-on-surface-variant">06:01</span>
+                                <span
+                                    class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors">play_arrow</span>
+                            </div>
+                        </div>
+                        <div
+                            class="flex items-center justify-between py-4 group hover:bg-surface-container-low px-4 transition-colors">
+                            <div class="flex gap-6 items-center">
+                                <span
+                                    class="font-mono text-[11px] text-on-surface-variant">03</span>
+                                <span
+                                    class="font-headline text-lg tracking-tight group-hover:text-primary transition-colors">Cold_Boot_Protocol</span>
+                            </div>
+                            <div class="flex gap-8 items-center">
+                                <span
+                                    class="font-mono text-[11px] text-on-surface-variant">03:45</span>
+                                <span
+                                    class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors">play_arrow</span>
+                            </div>
+                        </div>
+                        <div
+                            class="flex items-center justify-between py-4 group hover:bg-surface-container-low px-4 transition-colors">
+                            <div class="flex gap-6 items-center">
+                                <span
+                                    class="font-mono text-[11px] text-on-surface-variant">04</span>
+                                <span
+                                    class="font-headline text-lg tracking-tight group-hover:text-primary transition-colors">Binary
+                                    Ghost</span>
+                            </div>
+                            <div class="flex gap-8 items-center">
+                                <span
+                                    class="font-mono text-[11px] text-on-surface-variant">05:12</span>
+                                <span
+                                    class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors">play_arrow</span>
+                            </div>
+                        </div>
+                        <div
+                            class="flex items-center justify-between py-4 group hover:bg-surface-container-low px-4 transition-colors">
+                            <div class="flex gap-6 items-center">
+                                <span
+                                    class="font-mono text-[11px] text-on-surface-variant">05</span>
+                                <span
+                                    class="font-headline text-lg tracking-tight group-hover:text-primary transition-colors">Residual
+                                    Noise Path</span>
+                            </div>
+                            <div class="flex gap-8 items-center">
+                                <span
+                                    class="font-mono text-[11px] text-on-surface-variant">08:54</span>
+                                <span
+                                    class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors">play_arrow</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:col-span-5 flex flex-col gap-12">
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4">
+                            <span
+                                class="font-mono text-[10px] text-primary-dim px-2 py-0.5 border border-primary-container">ARCHIVE_LOGS</span>
+                            <div
+                                class="h-[1px] flex-grow bg-outline-variant/20"></div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-y-6 gap-x-4">
+                            <div>
+                                <p
+                                    class="font-mono text-[10px] uppercase text-on-surface-variant mb-1">RELEASE_DATE</p>
+                                <p class="font-mono text-sm">24_OCT_2024</p>
+                            </div>
+                            <div>
+                                <p
+                                    class="font-mono text-[10px] uppercase text-on-surface-variant mb-1">CATALOG_NO</p>
+                                <p class="font-mono text-sm">ARCH-099-V</p>
+                            </div>
+                            <div>
+                                <p
+                                    class="font-mono text-[10px] uppercase text-on-surface-variant mb-1">PRODUCER</p>
+                                <p class="font-mono text-sm">H. CASE</p>
+                            </div>
+                            <div>
+                                <p
+                                    class="font-mono text-[10px] uppercase text-on-surface-variant mb-1">DURATION</p>
+                                <p class="font-mono text-sm">28:14_MIN</p>
+                            </div>
+                        </div>
+                        <div class="pt-6 border-t border-outline-variant/10">
+                            <p
+                                class="font-mono text-[10px] uppercase text-on-surface-variant mb-3">CREDITS_MANIFEST</p>
+                            <div
+                                class="font-mono text-[11px] leading-relaxed text-on-surface/80">
+                                MASTERED BY T. MORI AT THE SPRAWL STATION.<br />
+                                SYNTHESIS MODULES PROVIDED BY TETSU-KO
+                                SYSTEMS.<br />
+                                COORDINATES: 35.6895° N, 139.6917° E.
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="ghost-border p-6 bg-surface-container-highest/30 space-y-4">
+                        <h3
+                            class="font-headline font-semibold text-sm tracking-tight text-primary">NETWORK_LINKS</h3>
+                        <div class="space-y-2">
+                            <a class="flex items-center justify-between group"
+                                href="#">
+                                <span
+                                    class="font-mono text-xs text-on-surface-variant group-hover:text-on-surface transition-colors">SPOTIFY_ACCESS</span>
+                                <span
+                                    class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-all">north_east</span>
+                            </a>
+                            <a class="flex items-center justify-between group"
+                                href="#">
+                                <span
+                                    class="font-mono text-xs text-on-surface-variant group-hover:text-on-surface transition-colors">BANDCAMP_PORTAL</span>
+                                <span
+                                    class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-all">north_east</span>
+                            </a>
+                            <a class="flex items-center justify-between group"
+                                href="#">
+                                <span
+                                    class="font-mono text-xs text-on-surface-variant group-hover:text-on-surface transition-colors">SC_STREAM_LINE</span>
+                                <span
+                                    class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-all">north_east</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="w-full py-8 border-t border-[#484848]/20 bg-[#0e0e0e]">
+            <div
+                class="flex flex-col md:flex-row justify-between items-center px-10 w-full gap-4 max-w-[1440px] mx-auto">
+                <div
+                    class="font-mono text-[10px] uppercase tracking-widest text-[#acabaa]">
+                    SYSTEM_STATUS: OPERATIONAL // © 2024 ARCHIVE_PROTOCOL
+                </div>
+                <div class="flex gap-8">
+                    <a
+                        class="font-mono text-[10px] uppercase tracking-widest text-[#acabaa] hover:text-[#96d4af] underline decoration-dotted transition-opacity duration-500"
+                        href="#">TERMINAL</a>
+                    <a
+                        class="font-mono text-[10px] uppercase tracking-widest text-[#acabaa] hover:text-[#96d4af] underline decoration-dotted transition-opacity duration-500"
+                        href="#">INDEX</a>
+                    <a
+                        class="font-mono text-[10px] uppercase tracking-widest text-[#acabaa] hover:text-[#96d4af] underline decoration-dotted transition-opacity duration-500"
+                        href="#">LOGS</a>
+                </div>
+            </div>
+        </footer>
+    </body></html>

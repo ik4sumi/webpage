@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;family=JetBrains+Mono:wght@300;400;500&amp;display=swap"
+            rel="stylesheet" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+            rel="stylesheet" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+            rel="stylesheet" />
+        <script
+            src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <script
+            id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"secondary-dim": "#9b9e9f", "inverse-surface": "#fbf9f8", "outline-variant": "#464849", "surface-container-highest": "#242627", "on-secondary": "#1d2121", "error-container": "#7f2927", "primary-dim": "#b1babc", "on-primary": "#394243", "surface-container-low": "#121414", "surface-dim": "#0e0e0e", "surface-bright": "#2a2d2d", "on-primary-fixed": "#384143", "on-tertiary-container": "#3e5868", "inverse-on-surface": "#555555", "primary-fixed": "#dbe4e6", "inverse-primary": "#576162", "on-secondary-fixed-variant": "#595c5d", "on-error": "#490106", "surface-container-high": "#1e2020", "tertiary-container": "#d0ecff", "on-surface-variant": "#aaabab", background: "#0e0e0e", "on-secondary-fixed": "#3c4040", "on-primary-container": "#c8d2d4", "tertiary-fixed": "#d0ecff", "surface-tint": "#bfc8ca", "surface-container": "#181a1a", surface: "#0e0e0e", "error-dim": "#bb5551", outline: "#747676", "on-surface": "#e5e5e6", "secondary-container": "#393c3d", error: "#ee7d77", "on-background": "#e5e5e6", secondary: "#9b9e9f", "surface-container-lowest": "#000000", primary: "#bfc8ca", "on-tertiary-fixed": "#2c4655", tertiary: "#eff8ff", "on-tertiary": "#466170", "tertiary-dim": "#c2def0", "secondary-fixed-dim": "#d2d5d5", "secondary-fixed": "#e1e3e3", "surface-variant": "#242627", "on-secondary-container": "#bdc0c0", "primary-fixed-dim": "#ccd6d8", "on-error-container": "#ff9993", "on-primary-fixed-variant": "#545d5f", "tertiary-fixed-dim": "#c2def0", "primary-container": "#3f484a", "on-tertiary-fixed-variant": "#486272"}, borderRadius: {DEFAULT: "0px", lg: "0px", xl: "0px", full: "0px"}, fontFamily: {headline: ["Space Grotesk"], body: ["Inter"], label: ["Space Grotesk"], mono: ["JetBrains Mono"], display: "Space Grotesk"}}}};</script>
+        <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            font-size: 18px;
+        }
+        body {
+            background-color: #0e0e0e;
+            color: #e7e5e5;
+            -webkit-font-smoothing: antialiased;
+        }
+        .ghost-border {
+            outline: 1px solid rgba(72, 72, 72, 0.2);
+        }
+        .ghost-border:hover {
+            outline-color: rgba(150, 212, 175, 0.3);
+        }
+    </style>
+    </head>
+    <body
+        class="font-body selection:bg-primary-container selection:text-on-primary-container">
+        <nav
+            class="fixed top-0 w-full z-50 bg-[#0e0e0e] border-b border-[#484848]/20 h-16">
+            <div
+                class="flex justify-between items-center px-6 h-full w-full max-w-[1440px] mx-auto">
+                <div
+                    class="font-['Space_Grotesk'] font-bold tracking-tighter text-[#96d4af] uppercase text-lg">
+                    NEUROMANCER
+                </div>
+                <div class="hidden md:flex gap-8 items-center">
+                    <a
+                        class="text-[#acabaa] font-mono hover:text-[#96d4af] transition-colors font-['Space_Grotesk'] tracking-tighter lowercase text-sm"
+                        href="#">HOME</a>
+                    <a
+                        class="text-[#96d4af] font-bold border-b border-[#96d4af] font-['Space_Grotesk'] tracking-tighter lowercase text-sm"
+                        href="#">RELEASES</a>
+                    <a
+                        class="text-[#acabaa] font-mono hover:text-[#96d4af] transition-colors font-['Space_Grotesk'] tracking-tighter lowercase text-sm"
+                        href="#">ABOUT</a>
+                    <a
+                        class="text-[#acabaa] font-mono hover:text-[#96d4af] transition-colors font-['Space_Grotesk'] tracking-tighter lowercase text-sm"
+                        href="#">CONTACT</a>
+                </div>
+                <div
+                    class="text-[#96d4af] font-mono text-xs tracking-widest opacity-80">
+                    00:00:00_UTC
+                </div>
+            </div>
+        </nav>
+        <main class="pt-24 pb-32 max-w-screen-xl mx-auto px-6 md:px-12">
+            <section class="grid grid-cols-1 md:grid-cols-12 gap-12 mb-20">
+                <div class="md:col-span-8 group relative">
+                    <div
+                        class="ghost-border p-1 bg-surface-container-low transition-all duration-700">
+                        <img alt="NEUROMANCER ALBUM COVER"
+                            class="w-full aspect-square object-cover grayscale-[0.2] group-hover:grayscale-0 transition-all duration-700"
+                            data-alt="Abstract dark album cover with geometric emerald green light patterns on deep charcoal textured background, minimalist archival style"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAy_ynPfnvkIuxVRt_2dzSTVPUF1_BzIQ62RgWsPeqc0Msj6E1EkTm_7AddRm874gTQaqwZ0xdkuZd3iAn2Li6Z15oKD-evKhNYu2uU6qTyHDwzq5mxbWa6CZQXKvgObqJQ2OS7pkfLXd4pQcefiwdNTck9P5hM1IyBR_Wyad2dW_64-m23Vi3fUCW9C3rrLcnZyBXsKV6zIev7VIB2KwZhz8c-S5o5hfixBJjo3egZB7rxpZvShtu3WCLlPuP9541lDujbIyCNzPLi" />
+                    </div>
+                    <div
+                        class="absolute bottom-4 right-4 bg-surface/80 backdrop-blur-md px-3 py-1 border border-outline-variant/20">
+                        <span
+                            class="font-mono text-[10px] text-on-surface-variant tracking-tighter uppercase">SPECIMEN_REF:
+                            NM-041-A</span>
+                    </div>
+                </div>
+                <div class="md:col-span-4 flex flex-col justify-end gap-6">
+                    <div>
+                        <span
+                            class="font-mono text-[11px] text-primary tracking-[0.2em] mb-2 block">ENTRY_ID
+                            // 0042</span>
+                        <h1
+                            class="font-headline text-5xl md:text-6xl font-bold tracking-tighter text-on-surface leading-none mb-4">
+                            VOID_STATIC
+                        </h1>
+                        <p
+                            class="font-mono text-sm text-on-surface-variant leading-relaxed max-w-xs">
+                            An exploration of recursive silence and
+                            electromagnetic artifacts. Captured in the
+                            subterranean sector 7.
+                        </p>
+                    </div>
+                    <div class="flex flex-col gap-3">
+                        <button
+                            class="bg-primary text-on-primary py-3 px-6 flex justify-between items-center hover:bg-primary-dim transition-all cursor-crosshair">
+                            <span
+                                class="font-mono text-xs font-bold uppercase tracking-widest">BUY_PHYSICAL</span>
+                            <span
+                                class="material-symbols-outlined">shopping_cart</span>
+                        </button>
+                        <div class="grid grid-cols-3 gap-2">
+                            <a
+                                class="ghost-border bg-surface-container-low p-3 flex items-center justify-center hover:text-primary transition-colors"
+                                href="#">
+                                <span
+                                    class="material-symbols-outlined">radio</span>
+                            </a>
+                            <a
+                                class="ghost-border bg-surface-container-low p-3 flex items-center justify-center hover:text-primary transition-colors"
+                                href="#">
+                                <span
+                                    class="material-symbols-outlined">sound_detection_dog_barking</span>
+                            </a>
+                            <a
+                                class="ghost-border bg-surface-container-low p-3 flex items-center justify-center hover:text-primary transition-colors"
+                                href="#">
+                                <span
+                                    class="material-symbols-outlined">play_circle</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="grid grid-cols-1 md:grid-cols-12 gap-12">
+                <div class="md:col-span-7">
+                    <div class="flex items-center gap-4 mb-8">
+                        <span
+                            class="font-mono text-[10px] text-primary-dim px-2 py-0.5 border border-primary-container">FILE_INFO</span>
+                        <div
+                            class="h-[1px] flex-grow bg-outline-variant/20"></div>
+                        <span
+                            class="font-mono text-[10px] text-on-surface-variant uppercase">TRACK_LISTING</span>
+                    </div>
+                    <div class="space-y-1">
+                        <div
+                            class="flex items-center justify-between py-4 group hover:bg-surface-container-low px-4 transition-colors">
+                            <div class="flex gap-6 items-center">
+                                <span
+                                    class="font-mono text-[11px] text-on-surface-variant">01</span>
+                                <span
+                                    class="font-headline text-lg tracking-tight group-hover:text-primary transition-colors">Fragmented
+                                    Memory</span>
+                            </div>
+                            <div class="flex gap-8 items-center">
+                                <span
+                                    class="font-mono text-[11px] text-on-surface-variant">04:22</span>
+                                <span
+                                    class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors">play_arrow</span>
+                            </div>
+                        </div>
+                        <div
+                            class="flex items-center justify-between py-4 group hover:bg-surface-container-low px-4 transition-colors">
+                            <div class="flex gap-6 items-center">
+                                <span
+                                    class="font-mono text-[11px] text-on-surface-variant">02</span>
+                                <span
+                                    class="font-headline text-lg tracking-tight group-hover:text-primary transition-colors">Terminal
+                                    Horizon</span>
+                            </div>
+                            <div class="flex gap-8 items-center">
+                                <span
+                                    class="font-mono text-[11px] text-on-surface-variant">06:01</span>
+                                <span
+                                    class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors">play_arrow</span>
+                            </div>
+                        </div>
+                        <div
+                            class="flex items-center justify-between py-4 group hover:bg-surface-container-low px-4 transition-colors">
+                            <div class="flex gap-6 items-center">
+                                <span
+                                    class="font-mono text-[11px] text-on-surface-variant">03</span>
+                                <span
+                                    class="font-headline text-lg tracking-tight group-hover:text-primary transition-colors">Cold_Boot_Protocol</span>
+                            </div>
+                            <div class="flex gap-8 items-center">
+                                <span
+                                    class="font-mono text-[11px] text-on-surface-variant">03:45</span>
+                                <span
+                                    class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors">play_arrow</span>
+                            </div>
+                        </div>
+                        <div
+                            class="flex items-center justify-between py-4 group hover:bg-surface-container-low px-4 transition-colors">
+                            <div class="flex gap-6 items-center">
+                                <span
+                                    class="font-mono text-[11px] text-on-surface-variant">04</span>
+                                <span
+                                    class="font-headline text-lg tracking-tight group-hover:text-primary transition-colors">Binary
+                                    Ghost</span>
+                            </div>
+                            <div class="flex gap-8 items-center">
+                                <span
+                                    class="font-mono text-[11px] text-on-surface-variant">05:12</span>
+                                <span
+                                    class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors">play_arrow</span>
+                            </div>
+                        </div>
+                        <div
+                            class="flex items-center justify-between py-4 group hover:bg-surface-container-low px-4 transition-colors">
+                            <div class="flex gap-6 items-center">
+                                <span
+                                    class="font-mono text-[11px] text-on-surface-variant">05</span>
+                                <span
+                                    class="font-headline text-lg tracking-tight group-hover:text-primary transition-colors">Residual
+                                    Noise Path</span>
+                            </div>
+                            <div class="flex gap-8 items-center">
+                                <span
+                                    class="font-mono text-[11px] text-on-surface-variant">08:54</span>
+                                <span
+                                    class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors">play_arrow</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:col-span-5 flex flex-col gap-12">
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4">
+                            <span
+                                class="font-mono text-[10px] text-primary-dim px-2 py-0.5 border border-primary-container">ARCHIVE_LOGS</span>
+                            <div
+                                class="h-[1px] flex-grow bg-outline-variant/20"></div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-y-6 gap-x-4">
+                            <div>
+                                <p
+                                    class="font-mono text-[10px] uppercase text-on-surface-variant mb-1">RELEASE_DATE</p>
+                                <p class="font-mono text-sm">24_OCT_2024</p>
+                            </div>
+                            <div>
+                                <p
+                                    class="font-mono text-[10px] uppercase text-on-surface-variant mb-1">CATALOG_NO</p>
+                                <p class="font-mono text-sm">ARCH-099-V</p>
+                            </div>
+                            <div>
+                                <p
+                                    class="font-mono text-[10px] uppercase text-on-surface-variant mb-1">PRODUCER</p>
+                                <p class="font-mono text-sm">H. CASE</p>
+                            </div>
+                            <div>
+                                <p
+                                    class="font-mono text-[10px] uppercase text-on-surface-variant mb-1">DURATION</p>
+                                <p class="font-mono text-sm">28:14_MIN</p>
+                            </div>
+                        </div>
+                        <div class="pt-6 border-t border-outline-variant/10">
+                            <p
+                                class="font-mono text-[10px] uppercase text-on-surface-variant mb-3">CREDITS_MANIFEST</p>
+                            <div
+                                class="font-mono text-[11px] leading-relaxed text-on-surface/80">
+                                MASTERED BY T. MORI AT THE SPRAWL STATION.<br />
+                                SYNTHESIS MODULES PROVIDED BY TETSU-KO
+                                SYSTEMS.<br />
+                                COORDINATES: 35.6895° N, 139.6917° E.
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="ghost-border p-6 bg-surface-container-highest/30 space-y-4">
+                        <h3
+                            class="font-headline font-semibold text-sm tracking-tight text-primary">NETWORK_LINKS</h3>
+                        <div class="space-y-2">
+                            <a class="flex items-center justify-between group"
+                                href="#">
+                                <span
+                                    class="font-mono text-xs text-on-surface-variant group-hover:text-on-surface transition-colors">SPOTIFY_ACCESS</span>
+                                <span
+                                    class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-all">north_east</span>
+                            </a>
+                            <a class="flex items-center justify-between group"
+                                href="#">
+                                <span
+                                    class="font-mono text-xs text-on-surface-variant group-hover:text-on-surface transition-colors">BANDCAMP_PORTAL</span>
+                                <span
+                                    class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-all">north_east</span>
+                            </a>
+                            <a class="flex items-center justify-between group"
+                                href="#">
+                                <span
+                                    class="font-mono text-xs text-on-surface-variant group-hover:text-on-surface transition-colors">SC_STREAM_LINE</span>
+                                <span
+                                    class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-all">north_east</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="w-full py-8 border-t border-[#484848]/20 bg-[#0e0e0e]">
+            <div
+                class="flex flex-col md:flex-row justify-between items-center px-10 w-full gap-4 max-w-[1440px] mx-auto">
+                <div
+                    class="font-mono text-[10px] uppercase tracking-widest text-[#acabaa]">
+                    SYSTEM_STATUS: OPERATIONAL // © 2024 ARCHIVE_PROTOCOL
+                </div>
+                <div class="flex gap-8">
+                    <a
+                        class="font-mono text-[10px] uppercase tracking-widest text-[#acabaa] hover:text-[#96d4af] underline decoration-dotted transition-opacity duration-500"
+                        href="#">TERMINAL</a>
+                    <a
+                        class="font-mono text-[10px] uppercase tracking-widest text-[#acabaa] hover:text-[#96d4af] underline decoration-dotted transition-opacity duration-500"
+                        href="#">INDEX</a>
+                    <a
+                        class="font-mono text-[10px] uppercase tracking-widest text-[#acabaa] hover:text-[#96d4af] underline decoration-dotted transition-opacity duration-500"
+                        href="#">LOGS</a>
+                </div>
+            </div>
+        </footer>
+    </body></html>

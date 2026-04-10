@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NEUROMANCER // ABOUT</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;family=JetBrains+Mono:wght@300;400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"secondary-dim": "#9b9e9f", "inverse-surface": "#fbf9f8", "outline-variant": "#464849", "surface-container-highest": "#242627", "on-secondary": "#1d2121", "error-container": "#7f2927", "primary-dim": "#b1babc", "on-primary": "#394243", "surface-container-low": "#121414", "surface-dim": "#0e0e0e", "surface-bright": "#2a2d2d", "on-primary-fixed": "#384143", "on-tertiary-container": "#3e5868", "inverse-on-surface": "#555555", "primary-fixed": "#dbe4e6", "inverse-primary": "#576162", "on-secondary-fixed-variant": "#595c5d", "on-error": "#490106", "surface-container-high": "#1e2020", "tertiary-container": "#d0ecff", "on-surface-variant": "#aaabab", background: "#0e0e0e", "on-secondary-fixed": "#3c4040", "on-primary-container": "#c8d2d4", "tertiary-fixed": "#d0ecff", "surface-tint": "#bfc8ca", "surface-container": "#181a1a", surface: "#0e0e0e", "error-dim": "#bb5551", outline: "#747676", "on-surface": "#e5e5e6", "secondary-container": "#393c3d", error: "#ee7d77", "on-background": "#e5e5e6", secondary: "#9b9e9f", "surface-container-lowest": "#000000", primary: "#bfc8ca", "on-tertiary-fixed": "#2c4655", tertiary: "#eff8ff", "on-tertiary": "#466170", "tertiary-dim": "#c2def0", "secondary-fixed-dim": "#d2d5d5", "secondary-fixed": "#e1e3e3", "surface-variant": "#242627", "on-secondary-container": "#bdc0c0", "primary-fixed-dim": "#ccd6d8", "on-error-container": "#ff9993", "on-primary-fixed-variant": "#545d5f", "tertiary-fixed-dim": "#c2def0", "primary-container": "#3f484a", "on-tertiary-fixed-variant": "#486272"}, borderRadius: {DEFAULT: "0px", lg: "0px", xl: "0px", full: "0px"}, fontFamily: {headline: ["Space Grotesk"], body: ["Inter"], label: ["Space Grotesk"], mono: ["JetBrains Mono"], display: "Space Grotesk"}}}};</script>
+<style>
+        body {
+            background-color: #0e0e0e;
+            color: #e7e5e5;
+            font-family: 'JetBrains Mono', monospace;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+        }
+        .ghost-border {
+            outline: 1px solid rgba(72, 72, 72, 0.2);
+        }
+        .ghost-border:focus-within {
+            outline-color: #96d4af;
+        }
+        ::selection {
+            background-color: #96d4af;
+            color: #064a2f;
+        }
+    </style>
+</head>
+<body class="selection:bg-primary selection:text-on-primary">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#0e0e0e] border-b border-[#484848]/20 h-16">
+<div class="flex justify-between items-center px-6 h-full w-full max-w-[1440px] mx-auto">
+<div class="font-['Space_Grotesk'] font-bold tracking-tighter text-[#96d4af] uppercase">
+                NEUROMANCER
+            </div>
+<nav class="hidden md:flex gap-8 items-center h-full">
+<a class="text-[#acabaa] font-mono hover:text-[#96d4af] transition-colors lowercase text-sm" href="index.html">HOME</a>
+<a class="text-[#acabaa] font-mono hover:text-[#96d4af] transition-colors lowercase text-sm" href="releases.html">RELEASES</a>
+<a class="text-[#96d4af] font-bold border-b border-[#96d4af] font-['Space_Grotesk'] tracking-tighter lowercase text-sm" href="about.html">ABOUT</a>
+<a class="text-[#acabaa] font-mono hover:text-[#96d4af] transition-colors lowercase text-sm" href="contact.html">CONTACT</a>
+</nav>
+<div class="text-[#96d4af] font-mono text-sm tracking-widest">
+                00:00:00_UTC
+            </div>
+</div>
+</header>
+<main class="pt-32 pb-24 px-6 md:px-12 max-w-[1440px] mx-auto min-h-screen">
+<!-- Header Section -->
+<section class="mb-24">
+<div class="flex flex-col md:flex-row justify-between items-end gap-8">
+<div class="max-w-2xl">
+<span class="text-primary text-[10px] tracking-[0.3em] mb-4 block">ENTRY_ID: 00_ARCHIVE</span>
+<h1 class="text-5xl md:text-7xl font-headline font-bold tracking-tighter lowercase mb-8">
+                        The Digital <span class="text-primary">Curator</span>.
+                    </h1>
+</div>
+<div class="text-right hidden md:block">
+<p class="text-on-surface-variant text-[10px] uppercase tracking-widest leading-relaxed">
+                        system_status: operational<br/>
+                        location: decentralized_node<br/>
+                        protocol: aes-256-audio
+                    </p>
+</div>
+</div>
+</section>
+<!-- Main Content Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
+<!-- Technical Sidebar -->
+<div class="md:col-span-4 space-y-12">
+<div class="ghost-border p-6 bg-surface-container-low">
+<div class="flex justify-between items-center mb-6">
+<span class="text-[10px] text-primary">SIG_PATTERN.LOG</span>
+<span class="material-symbols-outlined text-sm text-primary">terminal</span>
+</div>
+<!-- Abstract Line Art / Diagram -->
+<div class="aspect-square relative flex items-center justify-center border border-outline-variant/10">
+<div class="absolute inset-4 border border-primary/20"></div>
+<div class="absolute inset-10 border border-primary/40"></div>
+<div class="w-full h-[1px] bg-primary/10 rotate-45 absolute"></div>
+<div class="w-full h-[1px] bg-primary/10 -rotate-45 absolute"></div>
+<div class="w-2 h-2 bg-primary absolute top-0 left-1/2 -translate-x-1/2"></div>
+<div class="w-2 h-2 bg-primary absolute bottom-0 left-1/2 -translate-x-1/2"></div>
+<div class="w-2 h-2 bg-primary absolute left-0 top-1/2 -translate-y-1/2"></div>
+<div class="w-2 h-2 bg-primary absolute right-0 top-1/2 -translate-y-1/2"></div>
+<div class="text-[8px] text-primary-dim opacity-50 absolute bottom-2 right-2">VECTOR_MAPPING_V.01</div>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between border-b border-outline-variant/20 pb-2">
+<span class="text-[10px] text-on-surface-variant">ORIGIN</span>
+<span class="text-[10px]">TOKYO_OSAKA_ENCRYPT</span>
+</div>
+<div class="flex justify-between border-b border-outline-variant/20 pb-2">
+<span class="text-[10px] text-on-surface-variant">ESTABLISHED</span>
+<span class="text-[10px]">2021_Q3</span>
+</div>
+<div class="flex justify-between border-b border-outline-variant/20 pb-2">
+<span class="text-[10px] text-on-surface-variant">CORE_PROCESS</span>
+<span class="text-[10px]">SONIC_PRESERVATION</span>
+</div>
+</div>
+</div>
+<!-- Profile / Archive Note -->
+<div class="md:col-span-8">
+<div class="bg-surface-container-low p-8 md:p-12 border-l-2 border-primary">
+<div class="flex items-center gap-4 mb-8">
+<span class="w-3 h-3 bg-primary"></span>
+<h2 class="text-xl font-headline tracking-tighter lowercase">Neuromancer Archive Protocol</h2>
+</div>
+<div class="space-y-8 text-on-surface-variant leading-relaxed text-sm md:text-base max-w-2xl">
+<p>
+<span class="text-primary mr-2 font-bold">&gt;</span>
+                            Neuromancer is an experimental music circle and digital repository dedicated to the intersection of brutalist architecture and modular synthesis. We exist in the silences between data packets, curating soundscapes that reflect the quiet authority of high-end technical documentation and early-internet archives.
+                        </p>
+<p>
+                            Our philosophy is rooted in <span class="text-on-surface">Precision, Silence, and Preservation</span>. We reject the clutter of modern distribution in favor of a "Windowed Framing" approach—where every release is treated as a specimen, every track as a metadata entry.
+                        </p>
+<p>
+                            The Digital Curator does not merely broadcast; we archive. We specialize in high-fidelity sonic artifacts that evoke the cold, focused atmosphere of a server room at midnight. No neon glows, no glitch clichés—only the steady, intentional pulse of the machine.
+                        </p>
+</div>
+<div class="mt-16 grid grid-cols-1 sm:grid-cols-2 gap-8">
+<div class="group cursor-crosshair">
+<div class="aspect-[16/9] mb-4 overflow-hidden border border-outline-variant/20">
+<img alt="Close-up of vintage modular synthesizer cables and patch points in low light" class="w-full h-full object-cover grayscale opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" data-alt="monochrome macro photography of vintage modular synthesizer patch cables and ports with soft technical backlighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA29hw58uk5uLptQWOJKDai3INnW9PrYugvZplcRnLysiIe4iCQ_t5Eh5m-JsTQMjjeBPtSw3PxkZy9JRIg7KEy4hu3evWlkdWSJLjwEvpyr8CJWsB6kdZoHNIIcyZl1RoMsxqHlpb25217pmbpRoNr9Ouk6_f5HLHrawfbhOE5TZKdQ7E-zfVSWENYYvBwEdIZePMrnazg1jbpoynzuSPHZvtklZOW-jqqOtR3Cipakm2lNuHtfwGBsAMGpLWSmObgli1p1j3Oaz1K"/>
+</div>
+<span class="text-[10px] text-on-surface-variant uppercase tracking-widest block mb-1">specimen_01</span>
+<span class="text-[9px] text-primary/60">ANALOG_HEART_CORE.JPG</span>
+</div>
+<div class="group cursor-crosshair">
+<div class="aspect-[16/9] mb-4 overflow-hidden border border-outline-variant/20">
+<img alt="Extreme close-up of a high-tech circuit board with glowing green traces" class="w-full h-full object-cover grayscale opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" data-alt="dramatic close-up of dark industrial electronic circuit board with deep green accent lighting and sharp architectural lines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpMclHhjzuAuApNqFe9hqWTgvSKJVQHPIIaK7lfuCZd-c46pfZ7S2qxkkgWIBA1umykQFPfD3T1gGERfyE_VQWNBeeDYTzkRKOvuUxa1vR3lbkDPDd-5EnJW2okpi0ALj9OA7O_aZhSzj4em9QnfX-37cjMG-JxLcXFEkNUs4dZC0WroBcIduC5w_mVPGejm-Q5sENwhcBDquLA-ilwzTrEYTn0UugL5jhHRVMLq_BDrU-wH6jkeOfF9jAf3JunRYJwJ9fD9HVzMnA"/>
+</div>
+<span class="text-[10px] text-on-surface-variant uppercase tracking-widest block mb-1">specimen_02</span>
+<span class="text-[9px] text-primary/60">DATA_STRUCTURE_V2.JPG</span>
+</div>
+</div>
+</div>
+<!-- Manifesto / Footer Link -->
+<div class="mt-12 flex flex-col items-start gap-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-lg">info</span>
+<span class="text-[10px] uppercase tracking-[0.2em]">End of Transmission</span>
+</div>
+<button class="bg-primary text-on-primary px-8 py-4 font-mono text-xs uppercase tracking-widest hover:bg-primary-dim transition-colors">
+                        request_access_to_logs
+                    </button>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-8 border-t border-[#484848]/20 bg-[#0e0e0e]">
+<div class="flex flex-col md:flex-row justify-between items-center px-10 w-full gap-4 max-w-[1440px] mx-auto">
+<div class="font-mono text-[10px] uppercase tracking-widest text-[#acabaa]">
+                SYSTEM_STATUS: OPERATIONAL // © 2024 ARCHIVE_PROTOCOL
+            </div>
+<div class="flex gap-8">
+<a class="font-mono text-[10px] uppercase tracking-widest text-[#acabaa] hover:text-[#96d4af] underline decoration-dotted transition-opacity duration-500" href="#">TERMINAL</a>
+<a class="font-mono text-[10px] uppercase tracking-widest text-[#acabaa] hover:text-[#96d4af] underline decoration-dotted transition-opacity duration-500" href="#">INDEX</a>
+<a class="font-mono text-[10px] uppercase tracking-widest text-[#acabaa] hover:text-[#96d4af] underline decoration-dotted transition-opacity duration-500" href="#">LOGS</a>
+</div>
+</div>
+</footer>
+</body></html>

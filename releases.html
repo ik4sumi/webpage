@@ -32,25 +32,26 @@
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         }
+        .nav-link { position: relative; display: inline-block; color: #ffffff; text-transform: lowercase; letter-spacing: 0.15em; transition: letter-spacing 0.3s ease; }
+        .nav-link::after { content: ""; position: absolute; left: 0; bottom: -6px; width: 100%; height: 1px; background: rgba(255,255,255,0.7); transform: scaleX(0); transform-origin: left; transition: transform 0.3s ease; }
+        .nav-link:hover { letter-spacing: 0.3em; }
+        .nav-link:hover::after, .nav-link.active::after { transform: scaleX(1); }
     </style>
     </head>
     <body class="font-body selection:bg-primary selection:text-on-primary">
         <!-- TopNavBar -->
-<header class="fixed top-0 w-full z-50 bg-[#0e0e0e] border-b border-[#484848]/20 h-16 flex items-center">
+<header class="fixed top-0 w-full z-50 bg-transparent border-b border-[#484848]/20 h-20 flex items-center backdrop-blur-sm">
 <div class="flex justify-between items-center px-6 w-full max-w-[1440px] mx-auto">
-<div class="font-['Space_Grotesk'] font-bold tracking-tighter text-[#ffffff] uppercase" style="">NEUROMANCER</div>
-<nav class="flex flex-wrap items-center gap-6 text-sm">
-                    <a class="text-[#ffffff] font-mono hover:text-[#ffffff] transition-colors font-['Space_Grotesk'] tracking-tighter lowercase text-sm" href="index.html" style="">HOME</a>
-                    <a class="text-[#ffffff] font-bold border-b border-[#ffffff] font-['Space_Grotesk'] tracking-tighter lowercase text-sm" href="releases.html" style="">RELEASES</a>
-                    <a class="text-[#ffffff] font-mono hover:text-[#ffffff] transition-colors font-['Space_Grotesk'] tracking-tighter lowercase text-sm" href="about.html" style="">ABOUT</a>
-                    <a class="text-[#ffffff] font-mono hover:text-[#ffffff] transition-colors font-['Space_Grotesk'] tracking-tighter lowercase text-sm" href="contact.html" style="">CONTACT</a>
+<div class="font-['Space_Grotesk'] font-bold text-2xl tracking-tight text-[#ffffff] uppercase" style="">NEUROMANCER</div>
+<nav class="flex flex-wrap items-center gap-8 text-base">
+                    <a class="nav-link font-['Space_Grotesk']" href="index.html" style="">HOME</a>
+                    <a class="nav-link font-['Space_Grotesk'] active" href="releases.html" style="">RELEASES</a>
+                    <a class="nav-link font-['Space_Grotesk']" href="about.html" style="">ABOUT</a>
+                    <a class="nav-link font-['Space_Grotesk']" href="contact.html" style="">CONTACT</a>
 </nav>
-<div class="flex items-center gap-4">
-<span class="font-mono text-[10px] text-[#ffffff] tracking-widest hidden sm:block" style="">00:00:00_UTC</span>
-</div>
 </div>
 </header>
-<main class="pt-24 pb-32 max-w-[1440px] mx-auto px-6 lg:px-10">
+<main class="pt-32 pb-32 max-w-[1440px] mx-auto px-6 lg:px-10">
             <!-- Header Section -->
             <header
                 class="mb-16 md:mb-24 flex flex-col md:flex-row md:items-end justify-between gap-8 border-b border-outline-variant/10 pb-12">

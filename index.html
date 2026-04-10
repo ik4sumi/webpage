@@ -193,4 +193,57 @@
                 </div> -->
             </div>
         </footer>
+        <script>
+        (function () {
+            var characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789<>/\\[]{}#%&-_";
+            function shouldScramble(el) {
+                if (!el || ["SCRIPT", "STYLE", "NOSCRIPT"].indexOf(el.tagName) !== -1) { return false; }
+                var hasTextNode = false;
+                el.childNodes.forEach(function (node) {
+                    if (node.nodeType === Node.TEXT_NODE && node.nodeValue.trim().length > 0) {
+                        hasTextNode = true;
+                    }
+                });
+                return hasTextNode;
+            }
+            function scrambleElement(el, delay) {
+                var original = el.textContent;
+                var length = original.length;
+                if (!length) { return; }
+                var initial = "";
+                for (var j = 0; j < length; j++) {
+                    var char = original[j];
+                    initial += /\s/.test(char) ? char : characters[Math.floor(Math.random() * characters.length)];
+                }
+                el.textContent = initial;
+                var revealStep = Math.max(1, Math.floor(length / 12));
+                setTimeout(function () {
+                    var iteration = 0;
+                    var timer = setInterval(function () {
+                        var output = "";
+                        for (var i = 0; i < length; i++) {
+                            var char = original[i];
+                            if (/\s/.test(char) || i < iteration) {
+                                output += char;
+                            } else {
+                                output += characters[Math.floor(Math.random() * characters.length)];
+                            }
+                        }
+                        el.textContent = output;
+                        iteration += revealStep;
+                        if (iteration >= length) {
+                            el.textContent = original;
+                            clearInterval(timer);
+                        }
+                    }, 45);
+                }, delay);
+            }
+            window.addEventListener('load', function () {
+                var targets = Array.prototype.slice.call(document.querySelectorAll('body *')).filter(shouldScramble);
+                targets.forEach(function (el, index) {
+                    scrambleElement(el, index * 50);
+                });
+            });
+        })();
+        </script>
     </body></html>

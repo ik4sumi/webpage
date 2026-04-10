@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 
 <html class="dark" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"secondary-dim": "#9b9e9f", "inverse-surface": "#fbf9f8", "outline-variant": "#464849", "surface-container-highest": "#242627", "on-secondary": "#1d2121", "error-container": "#7f2927", "primary-dim": "#b1babc", "on-primary": "#394243", "surface-container-low": "#121414", "surface-dim": "#0e0e0e", "surface-bright": "#2a2d2d", "on-primary-fixed": "#384143", "on-tertiary-container": "#3e5868", "inverse-on-surface": "#555555", "primary-fixed": "#dbe4e6", "inverse-primary": "#576162", "on-secondary-fixed-variant": "#595c5d", "on-error": "#490106", "surface-container-high": "#1e2020", "tertiary-container": "#d0ecff", "on-surface-variant": "#aaabab", background: "#0e0e0e", "on-secondary-fixed": "#3c4040", "on-primary-container": "#c8d2d4", "tertiary-fixed": "#d0ecff", "surface-tint": "#bfc8ca", "surface-container": "#181a1a", surface: "#0e0e0e", "error-dim": "#bb5551", outline: "#747676", "on-surface": "#e5e5e6", "secondary-container": "#393c3d", error: "#ee7d77", "on-background": "#e5e5e6", secondary: "#9b9e9f", "surface-container-lowest": "#000000", primary: "#bfc8ca", "on-tertiary-fixed": "#2c4655", tertiary: "#eff8ff", "on-tertiary": "#466170", "tertiary-dim": "#c2def0", "secondary-fixed-dim": "#d2d5d5", "secondary-fixed": "#e1e3e3", "surface-variant": "#242627", "on-secondary-container": "#bdc0c0", "primary-fixed-dim": "#ccd6d8", "on-error-container": "#ff9993", "on-primary-fixed-variant": "#545d5f", "tertiary-fixed-dim": "#c2def0", "primary-container": "#3f484a", "on-tertiary-fixed-variant": "#486272"}, borderRadius: {DEFAULT: "0px", lg: "0px", xl: "0px", full: "0px"}, fontFamily: {headline: ["Space Grotesk"], body: ["Inter"], label: ["Space Grotesk"], mono: ["JetBrains Mono"], display: "Space Grotesk"}}}};</script>
-<style>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <script
+            src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap"
+            rel="stylesheet" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+            rel="stylesheet" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+            rel="stylesheet" />
+        <script
+            id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"secondary-dim": "#9b9e9f", "inverse-surface": "#fbf9f8", "outline-variant": "#464849", "surface-container-highest": "#242627", "on-secondary": "#1d2121", "error-container": "#7f2927", "primary-dim": "#b1babc", "on-primary": "#394243", "surface-container-low": "#121414", "surface-dim": "#0e0e0e", "surface-bright": "#2a2d2d", "on-primary-fixed": "#384143", "on-tertiary-container": "#3e5868", "inverse-on-surface": "#555555", "primary-fixed": "#dbe4e6", "inverse-primary": "#576162", "on-secondary-fixed-variant": "#595c5d", "on-error": "#490106", "surface-container-high": "#1e2020", "tertiary-container": "#d0ecff", "on-surface-variant": "#aaabab", background: "#0e0e0e", "on-secondary-fixed": "#3c4040", "on-primary-container": "#c8d2d4", "tertiary-fixed": "#d0ecff", "surface-tint": "#bfc8ca", "surface-container": "#181a1a", surface: "#0e0e0e", "error-dim": "#bb5551", outline: "#747676", "on-surface": "#e5e5e6", "secondary-container": "#393c3d", error: "#ee7d77", "on-background": "#e5e5e6", secondary: "#9b9e9f", "surface-container-lowest": "#000000", primary: "#bfc8ca", "on-tertiary-fixed": "#2c4655", tertiary: "#eff8ff", "on-tertiary": "#466170", "tertiary-dim": "#c2def0", "secondary-fixed-dim": "#d2d5d5", "secondary-fixed": "#e1e3e3", "surface-variant": "#242627", "on-secondary-container": "#bdc0c0", "primary-fixed-dim": "#ccd6d8", "on-error-container": "#ff9993", "on-primary-fixed-variant": "#545d5f", "tertiary-fixed-dim": "#c2def0", "primary-container": "#3f484a", "on-tertiary-fixed-variant": "#486272"}, borderRadius: {DEFAULT: "0px", lg: "0px", xl: "0px", full: "0px"}, fontFamily: {headline: ["Space Grotesk"], body: ["Inter"], label: ["Space Grotesk"], mono: ["JetBrains Mono"], display: "Space Grotesk"}}}};</script>
+        <style>
         body {
             background-color: #0e0e0e;
             color: #e7e5e5;
@@ -32,112 +40,170 @@
         .nav-link:hover { letter-spacing: 0.3em; }
         .nav-link:hover::after, .nav-link.active::after { transform: scaleX(1); }
     </style>
-</head>
-<body class="font-body selection:bg-primary-container selection:text-on-primary-container">
-<!-- TopNavBar -->
-<header class="fixed top-0 w-full z-50 bg-transparent border-b border-[#484848]/20 h-20 flex items-center backdrop-blur-sm">
-<div class="flex justify-between items-center px-6 w-full max-w-[1440px] mx-auto">
-<div class="font-['Space_Grotesk'] font-bold text-2xl tracking-tight text-[#ffffff] uppercase" style="">NEUROMANCER</div>
-<nav class="flex flex-wrap items-center gap-8 text-base">
-                    <a class="nav-link font-['Space_Grotesk']" href="index.html" style="">HOME</a>
-                    <a class="nav-link font-['Space_Grotesk']" href="releases.html" style="">RELEASES</a>
-                    <a class="nav-link font-['Space_Grotesk']" href="about.html" style="">ABOUT</a>
-                    <a class="nav-link font-['Space_Grotesk'] active" href="contact.html" style="">CONTACT</a>
-</nav>
-</div>
-</header>
-<main class="min-h-screen pt-32 pb-20 px-6 flex flex-col items-center justify-center">
-<div class="w-full max-w-2xl">
-<!-- Terminal Header -->
-<div class="mb-12 space-y-4">
-<div class="flex items-center gap-2 font-mono text-[10px] text-on-surface-variant tracking-[0.2em] uppercase">
-<span class="text-primary">[SYSTEM_STATUS: STABLE]</span>
-<span class="opacity-30">//</span>
-<span>DIRECTORY: /ROOT/CONTACT</span>
-</div>
-<h1 class="font-headline text-5xl md:text-7xl font-bold tracking-tighter lowercase text-on-surface">
-                    establish_contact<span class="custom-cursor ml-2"></span>
-</h1>
-<p class="text-on-surface-variant max-w-md font-mono text-sm leading-relaxed">
-                    the archive is quiet. for inquiries regarding audio preservation, collaborations, or terminal access, use the protocols listed below.
-                </p>
-</div>
-<!-- Terminal Links Menu -->
-<div class="space-y-1">
-<!-- Link Item -->
-<a class="group flex items-center justify-between p-4 bg-surface-container-low hover:bg-surface-container-highest transition-all duration-300 border-l-2 border-transparent hover:border-primary cursor-crosshair" href="mailto:archive@neuromancer.io">
-<div class="flex items-center gap-4">
-<span class="font-mono text-xs text-primary opacity-50 group-hover:opacity-100 transition-opacity">01</span>
-<span class="font-mono text-sm tracking-tight text-on-surface">MAIL_PROTOCOL</span>
-</div>
-<div class="flex items-center gap-4">
-<span class="font-mono text-[10px] text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity uppercase tracking-widest">archive@neuromancer.io</span>
-<span class="material-symbols-outlined text-sm text-primary">arrow_outward</span>
-</div>
-</a>
-<a class="group flex items-center justify-between p-4 bg-surface-container-low hover:bg-surface-container-highest transition-all duration-300 border-l-2 border-transparent hover:border-primary cursor-crosshair" href="#">
-<div class="flex items-center gap-4">
-<span class="font-mono text-xs text-primary opacity-50 group-hover:opacity-100 transition-opacity">02</span>
-<span class="font-mono text-sm tracking-tight text-on-surface">X_TRANSMISSION</span>
-</div>
-<div class="flex items-center gap-4">
-<span class="font-mono text-[10px] text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity uppercase tracking-widest">@neuromancer_arch</span>
-<span class="material-symbols-outlined text-sm text-primary">arrow_outward</span>
-</div>
-</a>
-<a class="group flex items-center justify-between p-4 bg-surface-container-low hover:bg-surface-container-highest transition-all duration-300 border-l-2 border-transparent hover:border-primary cursor-crosshair" href="#">
-<div class="flex items-center gap-4">
-<span class="font-mono text-xs text-primary opacity-50 group-hover:opacity-100 transition-opacity">03</span>
-<span class="font-mono text-sm tracking-tight text-on-surface">DISCORD_NODE</span>
-</div>
-<div class="flex items-center gap-4">
-<span class="font-mono text-[10px] text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity uppercase tracking-widest">inv: /the-archive</span>
-<span class="material-symbols-outlined text-sm text-primary">arrow_outward</span>
-</div>
-</a>
-<a class="group flex items-center justify-between p-4 bg-surface-container-low hover:bg-surface-container-highest transition-all duration-300 border-l-2 border-transparent hover:border-primary cursor-crosshair" href="#">
-<div class="flex items-center gap-4">
-<span class="font-mono text-xs text-primary opacity-50 group-hover:opacity-100 transition-opacity">04</span>
-<span class="font-mono text-sm tracking-tight text-on-surface">ENCRYPTED_SIGNAL</span>
-</div>
-<div class="flex items-center gap-4">
-<span class="font-mono text-[10px] text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity uppercase tracking-widest">+1 [REDACTED]</span>
-<span class="material-symbols-outlined text-sm text-primary">arrow_outward</span>
-</div>
-</a>
-</div>
-<!-- Visual Metadata Fragment -->
-<div class="mt-24 flex flex-col md:flex-row gap-12 items-start opacity-40 grayscale hover:grayscale-0 transition-all duration-700">
-<div class="relative w-full md:w-48 aspect-square border border-outline-variant/20">
-<img class="w-full h-full object-cover grayscale opacity-60" data-alt="Close-up of a vintage computer motherboard with green traces and circuits in low dramatic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZEY2yJFkWf5Nbh5qUD6djMXL2jSRNlVHV3ABQJz6_D5jxyEk7003jhjOBkoDKmrVOAbbTrlyagiFGUz2d2A29SWhdhDEuil0uF2FXOH6hXOLub8uVnNMzxmAk37mucuYgJZQX_QWCc5Codmss8aspehH-t88-EDgii_ToSPanBj8pXNVsHgW9CHYlVdnBUJyLB7f-bWd7lGtqVHYgIhv3kvfE9NSn9UurxhVbzkTpAtvjVUV5G0QTpdv2j98iqHUlZUma-fbALb8F"/>
-<div class="absolute bottom-1 right-1 font-mono text-[8px] bg-background px-1 text-primary">IMG_REF_094</div>
-</div>
-<div class="flex-1 space-y-4">
-<div class="font-mono text-[10px] tracking-widest text-on-surface-variant uppercase">Technical Specs:</div>
-<div class="grid grid-cols-2 gap-4 font-mono text-[10px] text-on-surface-variant">
-<div>LATENCY: 12MS</div>
-<div>NODE: EU-WEST-ARCHIVE</div>
-<div>SIGNAL: ENCRYPTED</div>
-<div>PROTOCOL: P2P_VOX</div>
-</div>
-<div class="w-full bg-surface-container-highest h-[1px]">
-<div class="bg-primary h-full w-1/3"></div>
-</div>
-</div>
-</div>
-</div>
-</main>
-<!-- Footer -->
-<footer class="w-full py-8 border-t border-[#484848]/20 bg-[#0e0e0e]">
-<div class="flex flex-col md:flex-row justify-between items-center px-10 w-full gap-4">
-<div class="font-mono text-[10px] uppercase tracking-widest text-[#acabaa]">
-                SYSTEM_STATUS: OPERATIONAL // © 2024 ARCHIVE_PROTOCOL
+    </head>
+    <body
+        class="font-body selection:bg-primary-container selection:text-on-primary-container">
+        <!-- TopNavBar -->
+        <header
+            class="fixed top-0 w-full z-50 bg-transparent border-b border-[#484848]/20 h-20 flex items-center backdrop-blur-sm">
+            <div
+                class="flex justify-between items-center px-6 w-full max-w-[1440px] mx-auto">
+                <div
+                    class="font-['Space_Grotesk'] font-bold text-2xl tracking-tight text-[#ffffff] uppercase"
+                    style>NEUROMANCER</div>
+                <nav class="flex flex-wrap items-center gap-8 text-base">
+                    <a class="nav-link font-['Space_Grotesk']" href="index.html"
+                        style>HOME</a>
+                    <a class="nav-link font-['Space_Grotesk']"
+                        href="releases.html" style>RELEASES</a>
+                    <a class="nav-link font-['Space_Grotesk']" href="about.html"
+                        style>ABOUT</a>
+                    <a class="nav-link font-['Space_Grotesk'] active"
+                        href="contact.html" style>CONTACT</a>
+                </nav>
             </div>
-<div class="flex gap-8">
-<a class="font-mono text-[10px] uppercase tracking-widest text-[#acabaa] hover:text-[#96d4af] underline decoration-dotted transition-opacity duration-500" href="#">TERMINAL</a>
-<a class="font-mono text-[10px] uppercase tracking-widest text-[#acabaa] hover:text-[#96d4af] underline decoration-dotted transition-opacity duration-500" href="#">INDEX</a>
-<a class="font-mono text-[10px] uppercase tracking-widest text-[#acabaa] hover:text-[#96d4af] underline decoration-dotted transition-opacity duration-500" href="#">LOGS</a>
-</div>
-</div>
-</footer>
-</body></html>
+        </header>
+        <main
+            class="min-h-screen pt-32 pb-20 px-6 flex flex-col items-center justify-center">
+            <div class="w-full max-w-2xl">
+                <!-- Terminal Header -->
+                <div class="mb-12 space-y-4">
+                    <div
+                        class="flex items-center gap-2 font-mono text-[10px] text-on-surface-variant tracking-[0.2em] uppercase">
+                        <span class="text-primary">[SYSTEM_STATUS:
+                            STABLE]</span>
+                        <span class="opacity-30">//</span>
+                        <span>DIRECTORY: /ROOT/CONTACT</span>
+                    </div>
+                    <h1
+                        class="font-headline text-5xl md:text-7xl font-bold tracking-tighter lowercase text-on-surface">
+                        establish_contact<span
+                            class="custom-cursor ml-2"></span>
+                    </h1>
+                    <!-- <p class="text-on-surface-variant max-w-md font-mono text-sm leading-relaxed">
+                    the archive is quiet. for inquiries regarding audio preservation, collaborations, or terminal access, use the protocols listed below.
+                </p> -->
+                </div>
+                <!-- Terminal Links Menu -->
+                <div class="space-y-1">
+                    <!-- Link Item -->
+                    <a
+                        class="group flex items-center justify-between p-4 bg-surface-container-low hover:bg-surface-container-highest transition-all duration-300 border-l-2 border-transparent hover:border-primary cursor-crosshair"
+                        href="mailto:archive@neuromancer.io">
+                        <div class="flex items-center gap-4">
+                            <span
+                                class="font-mono text-xs text-primary opacity-50 group-hover:opacity-100 transition-opacity">01</span>
+                            <span
+                                class="font-mono text-sm tracking-tight text-on-surface">EMAIL</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <span
+                                class="font-mono text-[10px] text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity uppercase tracking-widest">archive@neuromancer.io</span>
+                            <span
+                                class="material-symbols-outlined text-sm text-primary">arrow_outward</span>
+                        </div>
+                    </a>
+                    <a
+                        class="group flex items-center justify-between p-4 bg-surface-container-low hover:bg-surface-container-highest transition-all duration-300 border-l-2 border-transparent hover:border-primary cursor-crosshair"
+                        href="https://x.com/N3uroNeuro">
+                        <div class="flex items-center gap-4">
+                            <span
+                                class="font-mono text-xs text-primary opacity-50 group-hover:opacity-100 transition-opacity">02</span>
+                            <span
+                                class="font-mono text-sm tracking-tight text-on-surface">X:@N3uroNeuro</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <span
+                                class="font-mono text-[10px] text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity uppercase tracking-widest">@neuromancer_arch</span>
+                            <span
+                                class="material-symbols-outlined text-sm text-primary">arrow_outward</span>
+                        </div>
+                    </a>
+                    <a
+                        class="group flex items-center justify-between p-4 bg-surface-container-low hover:bg-surface-container-highest transition-all duration-300 border-l-2 border-transparent hover:border-primary cursor-crosshair"
+                        href="#">
+                        <div class="flex items-center gap-4">
+                            <span
+                                class="font-mono text-xs text-primary opacity-50 group-hover:opacity-100 transition-opacity">03</span>
+                            <span
+                                class="font-mono text-sm tracking-tight text-on-surface">DISCORD</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <span
+                                class="font-mono text-[10px] text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity uppercase tracking-widest">inv:
+                                /the-archive</span>
+                            <span
+                                class="material-symbols-outlined text-sm text-primary">arrow_outward</span>
+                        </div>
+                    </a>
+                    <a
+                        class="group flex items-center justify-between p-4 bg-surface-container-low hover:bg-surface-container-highest transition-all duration-300 border-l-2 border-transparent hover:border-primary cursor-crosshair"
+                        href="https://neuromancers.bandcamp.com/">
+                        <div class="flex items-center gap-4">
+                            <span
+                                class="font-mono text-xs text-primary opacity-50 group-hover:opacity-100 transition-opacity">04</span>
+                            <span
+                                class="font-mono text-sm tracking-tight text-on-surface">BANDCAMP</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <span
+                                class="font-mono text-[10px] text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity uppercase tracking-widest">+1
+                                [REDACTED]</span>
+                            <span
+                                class="material-symbols-outlined text-sm text-primary">arrow_outward</span>
+                        </div>
+                    </a>
+                </div>
+                <!-- Visual Metadata Fragment -->
+                <!-- <div
+                    class="mt-24 flex flex-col md:flex-row gap-12 items-start opacity-40 grayscale hover:grayscale-0 transition-all duration-700">
+                    <div
+                        class="relative w-full md:w-48 aspect-square border border-outline-variant/20">
+                        <img
+                            class="w-full h-full object-cover grayscale opacity-60"
+                            data-alt="Close-up of a vintage computer motherboard with green traces and circuits in low dramatic lighting"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZEY2yJFkWf5Nbh5qUD6djMXL2jSRNlVHV3ABQJz6_D5jxyEk7003jhjOBkoDKmrVOAbbTrlyagiFGUz2d2A29SWhdhDEuil0uF2FXOH6hXOLub8uVnNMzxmAk37mucuYgJZQX_QWCc5Codmss8aspehH-t88-EDgii_ToSPanBj8pXNVsHgW9CHYlVdnBUJyLB7f-bWd7lGtqVHYgIhv3kvfE9NSn9UurxhVbzkTpAtvjVUV5G0QTpdv2j98iqHUlZUma-fbALb8F" />
+                        <div
+                            class="absolute bottom-1 right-1 font-mono text-[8px] bg-background px-1 text-primary">IMG_REF_094</div>
+                    </div>
+                    <div class="flex-1 space-y-4">
+                        <div
+                            class="font-mono text-[10px] tracking-widest text-on-surface-variant uppercase">Technical
+                            Specs:</div>
+                        <div
+                            class="grid grid-cols-2 gap-4 font-mono text-[10px] text-on-surface-variant">
+                            <div>LATENCY: 12MS</div>
+                            <div>NODE: EU-WEST-ARCHIVE</div>
+                            <div>SIGNAL: ENCRYPTED</div>
+                            <div>PROTOCOL: P2P_VOX</div>
+                        </div>
+                        <div
+                            class="w-full bg-surface-container-highest h-[1px]">
+                            <div class="bg-primary h-full w-1/3"></div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </main>
+        <!-- Footer -->
+        <footer class="w-full py-8 border-t border-[#484848]/20 bg-[#0e0e0e]">
+            <div
+                class="flex flex-col md:flex-row justify-between items-center px-10 w-full gap-4">
+                <div
+                    class="font-mono text-[10px] uppercase tracking-widest text-[#acabaa]">
+                    SYSTEM_STATUS: OPERATIONAL // © 2024 ARCHIVE_PROTOCOL
+                </div>
+                <div class="flex gap-8">
+                    <a
+                        class="font-mono text-[10px] uppercase tracking-widest text-[#acabaa] hover:text-[#96d4af] underline decoration-dotted transition-opacity duration-500"
+                        href="#">TERMINAL</a>
+                    <a
+                        class="font-mono text-[10px] uppercase tracking-widest text-[#acabaa] hover:text-[#96d4af] underline decoration-dotted transition-opacity duration-500"
+                        href="#">INDEX</a>
+                    <a
+                        class="font-mono text-[10px] uppercase tracking-widest text-[#acabaa] hover:text-[#96d4af] underline decoration-dotted transition-opacity duration-500"
+                        href="#">LOGS</a>
+                </div>
+            </div>
+        </footer>
+    </body></html>

@@ -32,38 +32,38 @@
         .ghost-border:hover {
             outline-color: rgba(150, 212, 175, 0.3);
         }
+        .nav-link { position: relative; display: inline-block; color: #ffffff; text-transform: lowercase; letter-spacing: 0.15em; transition: letter-spacing 0.3s ease; }
+        .nav-link::after { content: ""; position: absolute; left: 0; bottom: -6px; width: 100%; height: 1px; background: rgba(255,255,255,0.7); transform: scaleX(0); transform-origin: left; transition: transform 0.3s ease; }
+        .nav-link:hover { letter-spacing: 0.3em; }
+        .nav-link:hover::after, .nav-link.active::after { transform: scaleX(1); }
     </style>
     </head>
     <body
         class="font-body selection:bg-primary-container selection:text-on-primary-container">
-        <nav
-            class="fixed top-0 w-full z-50 bg-[#0e0e0e] border-b border-[#484848]/20 h-16">
+        <!-- TopNavBar -->
+        <header
+            class="fixed top-0 w-full z-50 bg-transparent border-b border-[#484848]/20 h-20 flex items-center backdrop-blur-sm">
             <div
-                class="flex justify-between items-center px-6 h-full w-full max-w-[1440px] mx-auto">
+                class="flex justify-between items-center px-6 w-full max-w-[1440px] mx-auto">
                 <div
-                    class="font-['Space_Grotesk'] font-bold tracking-tighter text-[#96d4af] uppercase text-lg">
-                    NEUROMANCER
-                </div>
-                <div class="hidden md:flex gap-8 items-center">
+                    class="font-['Space_Grotesk'] font-bold text-2xl tracking-tight text-[#ffffff] uppercase"
+                    style>NEUROMANCER</div>
+                <nav class="flex flex-wrap items-center gap-8 text-base">
                     <a
-                        class="text-[#acabaa] font-mono hover:text-[#96d4af] transition-colors font-['Space_Grotesk'] tracking-tighter lowercase text-sm"
-                        href="#">HOME</a>
+                        class="nav-link font-['Space_Grotesk'] active"
+                        href="index.html" style>HOME</a>
                     <a
-                        class="text-[#96d4af] font-bold border-b border-[#96d4af] font-['Space_Grotesk'] tracking-tighter lowercase text-sm"
-                        href="#">RELEASES</a>
+                        class="nav-link font-['Space_Grotesk']"
+                        href="releases.html" style>RELEASES</a>
                     <a
-                        class="text-[#acabaa] font-mono hover:text-[#96d4af] transition-colors font-['Space_Grotesk'] tracking-tighter lowercase text-sm"
-                        href="#">ABOUT</a>
+                        class="nav-link font-['Space_Grotesk']"
+                        href="about.html" style>ABOUT</a>
                     <a
-                        class="text-[#acabaa] font-mono hover:text-[#96d4af] transition-colors font-['Space_Grotesk'] tracking-tighter lowercase text-sm"
-                        href="#">CONTACT</a>
-                </div>
-                <div
-                    class="text-[#96d4af] font-mono text-xs tracking-widest opacity-80">
-                    00:00:00_UTC
-                </div>
+                        class="nav-link font-['Space_Grotesk']"
+                        href="contact.html" style>CONTACT</a>
+                </nav>
             </div>
-        </nav>
+        </header>
         <main class="pt-24 pb-32 max-w-screen-xl mx-auto px-6 md:px-12">
             <section class="grid grid-cols-1 md:grid-cols-12 gap-12 mb-20">
                 <div class="md:col-span-8 group relative">
@@ -72,7 +72,7 @@
                         <img alt="NEUROMANCER ALBUM COVER"
                             class="w-full aspect-square object-cover grayscale-[0.2] group-hover:grayscale-0 transition-all duration-700"
                             data-alt="Abstract dark album cover with geometric emerald green light patterns on deep charcoal textured background, minimalist archival style"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAy_ynPfnvkIuxVRt_2dzSTVPUF1_BzIQ62RgWsPeqc0Msj6E1EkTm_7AddRm874gTQaqwZ0xdkuZd3iAn2Li6Z15oKD-evKhNYu2uU6qTyHDwzq5mxbWa6CZQXKvgObqJQ2OS7pkfLXd4pQcefiwdNTck9P5hM1IyBR_Wyad2dW_64-m23Vi3fUCW9C3rrLcnZyBXsKV6zIev7VIB2KwZhz8c-S5o5hfixBJjo3egZB7rxpZvShtu3WCLlPuP9541lDujbIyCNzPLi" />
+                            src="resources\releases\The Concealing Vol.1\IMG_0955.JPG" />
                     </div>
                     <div
                         class="absolute bottom-4 right-4 bg-surface/80 backdrop-blur-md px-3 py-1 border border-outline-variant/20">
@@ -83,18 +83,18 @@
                 </div>
                 <div class="md:col-span-4 flex flex-col justify-end gap-6">
                     <div>
-                        <span
+                        <!-- <span
                             class="font-mono text-[11px] text-primary tracking-[0.2em] mb-2 block">ENTRY_ID
-                            // 0042</span>
+                            // 0042</span> -->
                         <h1
                             class="font-headline text-5xl md:text-6xl font-bold tracking-tighter text-on-surface leading-none mb-4">
-                            VOID_STATIC
+                            The Concealing Vol.1
                         </h1>
                         <p
                             class="font-mono text-sm text-on-surface-variant leading-relaxed max-w-xs">
-                            An exploration of recursive silence and
-                            electromagnetic artifacts. Captured in the
-                            subterranean sector 7.
+                            "And then came █."
+                            Nested systems. Irregular rhythms. The line between signal and hallucination begins to blur.
+                            We call it █. And now, it calls back.
                         </p>
                     </div>
                     <div class="flex flex-col gap-3">
@@ -145,14 +145,13 @@
                                 <span
                                     class="font-mono text-[11px] text-on-surface-variant">01</span>
                                 <span
-                                    class="font-headline text-lg tracking-tight group-hover:text-primary transition-colors">Fragmented
-                                    Memory</span>
+                                    class="font-headline text-lg tracking-tight group-hover:text-primary transition-colors">Amo Nova - The Concealing</span>
                             </div>
                             <div class="flex gap-8 items-center">
                                 <span
-                                    class="font-mono text-[11px] text-on-surface-variant">04:22</span>
-                                <span
-                                    class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors">play_arrow</span>
+                                    class="font-mono text-[11px] text-on-surface-variant">01:31</span>
+                                <!-- <span
+                                    class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors">play_arrow</span> -->
                             </div>
                         </div>
                         <div
@@ -161,14 +160,13 @@
                                 <span
                                     class="font-mono text-[11px] text-on-surface-variant">02</span>
                                 <span
-                                    class="font-headline text-lg tracking-tight group-hover:text-primary transition-colors">Terminal
-                                    Horizon</span>
+                                    class="font-headline text-lg tracking-tight group-hover:text-primary transition-colors">Noir-D - Corrosion</span>
                             </div>
                             <div class="flex gap-8 items-center">
                                 <span
-                                    class="font-mono text-[11px] text-on-surface-variant">06:01</span>
-                                <span
-                                    class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors">play_arrow</span>
+                                    class="font-mono text-[11px] text-on-surface-variant">02:50</span>
+                                <!-- <span
+                                    class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors">play_arrow</span> -->
                             </div>
                         </div>
                         <div
@@ -177,13 +175,13 @@
                                 <span
                                     class="font-mono text-[11px] text-on-surface-variant">03</span>
                                 <span
-                                    class="font-headline text-lg tracking-tight group-hover:text-primary transition-colors">Cold_Boot_Protocol</span>
+                                    class="font-headline text-lg tracking-tight group-hover:text-primary transition-colors">Project-G - Doxa</span>
                             </div>
                             <div class="flex gap-8 items-center">
                                 <span
-                                    class="font-mono text-[11px] text-on-surface-variant">03:45</span>
-                                <span
-                                    class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors">play_arrow</span>
+                                    class="font-mono text-[11px] text-on-surface-variant">04:08</span>
+                                <!-- <span
+                                    class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors">play_arrow</span> -->
                             </div>
                         </div>
                         <div
@@ -192,14 +190,13 @@
                                 <span
                                     class="font-mono text-[11px] text-on-surface-variant">04</span>
                                 <span
-                                    class="font-headline text-lg tracking-tight group-hover:text-primary transition-colors">Binary
-                                    Ghost</span>
+                                    class="font-headline text-lg tracking-tight group-hover:text-primary transition-colors">Dirty Octopus - 痴生</span>
                             </div>
                             <div class="flex gap-8 items-center">
                                 <span
-                                    class="font-mono text-[11px] text-on-surface-variant">05:12</span>
-                                <span
-                                    class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors">play_arrow</span>
+                                    class="font-mono text-[11px] text-on-surface-variant">03:29</span>
+                                <!-- <span
+                                    class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors">play_arrow</span> -->
                             </div>
                         </div>
                         <div
@@ -208,14 +205,28 @@
                                 <span
                                     class="font-mono text-[11px] text-on-surface-variant">05</span>
                                 <span
-                                    class="font-headline text-lg tracking-tight group-hover:text-primary transition-colors">Residual
-                                    Noise Path</span>
+                                    class="font-headline text-lg tracking-tight group-hover:text-primary transition-colors">.grdn+ - LiMiNAL%VOiD</span>
                             </div>
                             <div class="flex gap-8 items-center">
                                 <span
-                                    class="font-mono text-[11px] text-on-surface-variant">08:54</span>
+                                    class="font-mono text-[11px] text-on-surface-variant">03:17</span>
                                 <span
                                     class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors">play_arrow</span>
+                            </div>
+                        </div>
+                        <div
+                            class="flex items-center justify-between py-4 group hover:bg-surface-container-low px-4 transition-colors">
+                            <div class="flex gap-6 items-center">
+                                <span
+                                    class="font-mono text-[11px] text-on-surface-variant">06</span>
+                                <span
+                                    class="font-headline text-lg tracking-tight group-hover:text-primary transition-colors">硝酸生菜Synzak - Alaya</span>
+                            </div>
+                            <div class="flex gap-8 items-center">
+                                <span
+                                    class="font-mono text-[11px] text-on-surface-variant">03:40</span>
+                                <!-- <span
+                                    class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors">play_arrow</span> -->
                             </div>
                         </div>
                     </div>

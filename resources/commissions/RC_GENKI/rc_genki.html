@@ -134,14 +134,16 @@
       }
       @media (max-width: 640px) {
         body > header {
-          height: auto;
-          align-items: flex-start;
-          padding: 0.9rem 0;
+          height: auto !important;
+          align-items: stretch;
+          padding: 1rem 0 1.1rem;
+          background: rgba(14, 14, 14, 0.78) !important;
         }
         body > header > div {
           flex-direction: column;
           align-items: flex-start;
-          gap: 0.9rem;
+          justify-content: center;
+          gap: 0.95rem;
         }
         body > header nav {
           flex-wrap: wrap;
@@ -156,6 +158,9 @@
         }
       }
       @media (max-width: 480px) {
+        body > header > div {
+          gap: 0.8rem;
+        }
         body > header nav {
           gap: 0.6rem 0.85rem;
         }

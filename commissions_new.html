@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>NEUROMANCER // COMMISSIONS</title>
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;family=JetBrains+Mono:wght@300;400&amp;display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
+        <script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"secondary-dim": "#9b9e9f", "inverse-surface": "#fbf9f8", "outline-variant": "#464849", "surface-container-highest": "#242627", "on-secondary": "#1d2121", "error-container": "#7f2927", "primary-dim": "#b1babc", "on-primary": "#394243", "surface-container-low": "#121414", "surface-dim": "#0e0e0e", "surface-bright": "#2a2d2d", "on-primary-fixed": "#384143", "on-tertiary-container": "#3e5868", "inverse-on-surface": "#555555", "primary-fixed": "#dbe4e6", "inverse-primary": "#576162", "on-secondary-fixed-variant": "#595c5d", "on-error": "#490106", "surface-container-high": "#1e2020", "tertiary-container": "#d0ecff", "on-surface-variant": "#aaabab", background: "#0e0e0e", "on-secondary-fixed": "#3c4040", "on-primary-container": "#c8d2d4", "tertiary-fixed": "#d0ecff", "surface-tint": "#bfc8ca", "surface-container": "#181a1a", surface: "#0e0e0e", "error-dim": "#bb5551", outline: "#747676", "on-surface": "#e5e5e6", "secondary-container": "#393c3d", error: "#ee7d77", "on-background": "#e5e5e6", secondary: "#9b9e9f", "surface-container-lowest": "#000000", primary: "#bfc8ca", "on-tertiary-fixed": "#2c4655", tertiary: "#eff8ff", "on-tertiary": "#466170", "tertiary-dim": "#c2def0", "secondary-fixed-dim": "#d2d5d5", "secondary-fixed": "#e1e3e3", "surface-variant": "#242627", "on-secondary-container": "#bdc0c0", "primary-fixed-dim": "#ccd6d8", "on-error-container": "#ff9993", "on-primary-fixed-variant": "#545d5f", "tertiary-fixed-dim": "#c2def0", "primary-container": "#3f484a", "on-tertiary-fixed-variant": "#486272"}, borderRadius: {DEFAULT: "0px", lg: "0px", xl: "0px", full: "0px"}, fontFamily: {headline: ["Space Grotesk"], body: ["Inter"], label: ["Space Grotesk"], mono: ["JetBrains Mono"], display: "Space Grotesk"}}}};</script>
+        <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #0e0e0e;
+            color: #e7e5e5;
+        }
+        .ghost-border {
+            outline: 1px solid rgba(72, 72, 72, 0.2);
+        }
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        }
+        .nav-link { position: relative; display: inline-block; color: #ffffff; text-transform: lowercase; letter-spacing: 0.15em; transition: letter-spacing 0.3s ease; }
+        .nav-link::after { content: ""; position: absolute; left: 0; bottom: -6px; width: 100%; height: 1px; background: rgba(255,255,255,0.7); transform: scaleX(0); transform-origin: left; transition: transform 0.3s ease; }
+        .nav-link:hover { letter-spacing: 0.3em; }
+        .nav-link:hover::after, .nav-link.active::after { transform: scaleX(1); }
+        @media (max-width: 640px) {
+            header nav { flex-wrap: nowrap; overflow-x: auto; gap: 1.25rem; white-space: nowrap; width: 100%; justify-content: flex-start; padding-bottom: 0.25rem; }
+            header nav a { white-space: nowrap; }
+            header nav::-webkit-scrollbar { display: none; }
+        }
+    </style>
+    </head>
+    <body class="font-body selection:bg-primary selection:text-on-primary">
+        <header class="fixed top-0 w-full z-50 bg-transparent border-b border-[#484848]/20 h-20 flex items-center backdrop-blur-sm">
+            <div class="flex justify-between items-center px-6 w-full max-w-[1440px] mx-auto">
+                <div class="font-['Space_Grotesk'] font-bold text-2xl tracking-tight text-[#ffffff] uppercase">NEUROMANCER</div>
+                <nav class="flex flex-wrap items-center gap-8 text-base">
+                    <a class="nav-link font-['Space_Grotesk']" href="index.html">HOME</a>
+                    <a class="nav-link font-['Space_Grotesk']" href="releases.html">RELEASES</a>
+                    <a class="nav-link font-['Space_Grotesk'] active" href="commissions.html">OPEN COMMISSIONS</a>
+                    <a class="nav-link font-['Space_Grotesk']" href="about.html">ABOUT</a>
+                    <a class="nav-link font-['Space_Grotesk']" href="contact.html">CONTACT</a>
+                </nav>
+            </div>
+        </header>
+        <main class="pt-32 pb-32 max-w-[1440px] mx-auto px-6 lg:px-10">
+            <header class="mb-16 md:mb-24 flex flex-col md:flex-row md:items-end justify-between gap-8 border-b border-outline-variant/10 pb-12">
+                <div class="max-w-3xl">
+                    <div class="flex items-center gap-2 mb-4">
+                        <span class="w-2 h-2 bg-primary"></span>
+                        <span class="font-mono text-[10px] tracking-[0.3em] text-on-surface-variant uppercase">Studio_Node // commissions_index</span>
+                    </div>
+                    <h1 class="text-5xl md:text-7xl font-headline font-light tracking-tighter leading-none lowercase text-on-surface">
+                        open <span class="text-primary italic font-medium">commissions</span>
+                    </h1>
+                </div>
+                <div class="font-mono text-[11px] text-on-surface-variant space-y-1 text-right">
+                    <p>STATUS: ACCEPTING PROJECTS</p>
+                    <p>RESPONSE_WINDOW: 72H</p>
+                    <p>FORMAT: BESPOKE AUDIO / SPATIAL WORK</p>
+                </div>
+            </header>
+
+            <section class="mb-20 grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-10 items-start">
+                <div class="space-y-6">
+                    <p class="font-mono text-[10px] uppercase tracking-[0.35em] text-primary">current availability</p>
+                    <p class="max-w-2xl text-sm md:text-base text-on-surface-variant leading-relaxed">
+                        NEUROMANCER accepts a small number of commissioned projects each cycle, spanning custom sound design,
+                        analog mastering, immersive installation work, and reconstruction for artists, labels, fashion, and moving image.
+                        This page now sits inside the same structural system as the archive and releases pages.
+                    </p>
+                    <p class="max-w-2xl text-sm md:text-base text-on-surface-variant leading-relaxed">
+                        Each brief is treated as a case file. Concept, signal design, engineering chain, and delivery format are handled as one authored system rather than separate technical tasks.
+                    </p>
+                </div>
+                <div class="border border-outline-variant/20 bg-surface-container-low p-6 space-y-4">
+                    <p class="font-mono text-[10px] uppercase tracking-[0.35em] text-on-surface-variant">protocol summary</p>
+                    <div class="space-y-3 font-mono text-[11px] text-on-surface">
+                        <div class="flex justify-between gap-4 border-b border-outline-variant/10 pb-3">
+                            <span class="text-on-surface-variant">MINIMUM SCOPE</span>
+                            <span>SINGLE / EP / INSTALLATION</span>
+                        </div>
+                        <div class="flex justify-between gap-4 border-b border-outline-variant/10 pb-3">
+                            <span class="text-on-surface-variant">DELIVERY</span>
+                            <span>24-BIT / 96KHZ + STEMS</span>
+                        </div>
+                        <div class="flex justify-between gap-4">
+                            <span class="text-on-surface-variant">CHANNEL</span>
+                            <span><a href="contact.html" class="hover:text-primary transition-colors">INQUIRE_TERMINAL</a></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-24">
+                <div class="flex justify-between items-end mb-12 border-b border-outline-variant/10 pb-4">
+                    <h2 class="font-headline text-2xl tracking-tight lowercase text-on-surface">Grid Layout for Services</h2>
+                    <span class="font-mono text-[10px] tracking-[0.35em] text-on-surface-variant uppercase">4 active specimens</span>
+                </div>
+                <div class="service-grid gap-px bg-outline-variant/10 border border-outline-variant/20">
+                    <article class="bg-[#0e0e0e] p-8 hover:bg-[#131313] transition-all duration-500 group relative">
+                        <div class="flex justify-between items-start mb-10">
+                            <span class="font-mono text-[10px] text-primary uppercase tracking-[0.28em]">SPECIMEN_01</span>
+                            <span class="font-mono text-[10px] text-emerald-500 uppercase tracking-[0.2em]">[OPEN]</span>
+                        </div>
+                        <div class="mb-8">
+                            <img alt="Professional audio synthesizer equipment in a dark studio setting" class="w-full h-52 object-cover desaturate-[20%] group-hover:scale-[1.02] transition-all duration-700 ghost-border" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhUtqtvHuAgRq1SIeMobdrI2BG4FWPpY3-Sz7lIY44MKckXh8k9loD0AS7Iwn-xSzhprv86eX6R4A0vQoU-tC2ynODC5KvKQlUr6jCQMAWUawGew5uzOSTay_Nk0gQxVlf7hzljIlJO7jmyIIfEkCcMbcUaqdyjWvKjd26nLpZ4xwIMnS85uKwPw_zOrQvPMnxz1MM4yGbEvltrUiBPimPVMD1SMYz8ws_BNnewCm4Em-4jKTf0t3-49ihWbUk-VRjevN1I4dUCTpu" />
+                            <div class="flex justify-end mt-2">
+                                <span class="font-mono text-[9px] text-on-surface-variant uppercase tracking-[0.22em]">FILE_ID: SND_DSGN_001</span>
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-headline font-medium text-on-surface mb-2 lowercase">custom sound design</h3>
+                        <p class="text-sm text-on-surface-variant mb-6 min-h-[3rem]">Synthesized textures, trailer impacts, atmospheres, and tactile motion cues for film, stage, and hybrid visual work.</p>
+                        <div class="flex justify-between items-center border-t border-outline-variant/10 pt-5 font-mono text-[11px]">
+                            <span class="text-on-surface-variant uppercase">Latency</span>
+                            <span class="text-on-surface uppercase">3-5 Cycles</span>
+                        </div>
+                    </article>
+
+                    <article class="bg-[#0e0e0e] p-8 hover:bg-[#131313] transition-all duration-500 group relative">
+                        <div class="flex justify-between items-start mb-10">
+                            <span class="font-mono text-[10px] text-primary uppercase tracking-[0.28em]">SPECIMEN_02</span>
+                            <span class="font-mono text-[10px] text-emerald-500 uppercase tracking-[0.2em]">[OPEN]</span>
+                        </div>
+                        <div class="mb-8">
+                            <img alt="Analog mastering hardware rack with glowing meters" class="w-full h-52 object-cover desaturate-[20%] group-hover:scale-[1.02] transition-all duration-700 ghost-border" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-r2q-zhLsU1Cul5ThvByeLJihOdFq9TucwD3TiJO5Pfc4rU8XveHMGSjqEOjbap6opULABjetNXZdTUQ0Ikg-TuozhLBkTrtJiBKJW5nVy9-Rrgnj-tZy_JKWrf5j0_fncdKo6A5JlFB15pK2rNXeV6tTW4NrvHCYjT8ah4W4kxNJszmg_qjZ_BTiAn9gCcEKrj5T1BCa59nmdTNSB1C5E7N1588iMc6_FeQRwU8vQ7gjswGBmG779a181DkD3c12eh1CO5z4ND6a" />
+                            <div class="flex justify-end mt-2">
+                                <span class="font-mono text-[9px] text-on-surface-variant uppercase tracking-[0.22em]">FILE_ID: ANLG_MSTR_002</span>
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-headline font-medium text-on-surface mb-2 lowercase">analog mastering</h3>
+                        <p class="text-sm text-on-surface-variant mb-6 min-h-[3rem]">Stereo and stem mastering through a dedicated hardware path for projects requiring weight, depth, and archive-grade finish.</p>
+                        <div class="flex justify-between items-center border-t border-outline-variant/10 pt-5 font-mono text-[11px]">
+                            <span class="text-on-surface-variant uppercase">Latency</span>
+                            <span class="text-on-surface uppercase">2 Cycles</span>
+                        </div>
+                    </article>
+
+                    <article class="bg-[#0e0e0e] p-8 hover:bg-[#131313] transition-all duration-500 group relative">
+                        <div class="flex justify-between items-start mb-10">
+                            <span class="font-mono text-[10px] text-primary uppercase tracking-[0.28em]">SPECIMEN_03</span>
+                            <span class="font-mono text-[10px] text-amber-500 uppercase tracking-[0.2em]">[QUEUED]</span>
+                        </div>
+                        <div class="mb-8">
+                            <img alt="Abstract digital sound wave visualization" class="w-full h-52 object-cover desaturate-[20%] group-hover:scale-[1.02] transition-all duration-700 ghost-border" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoy8vCek4R-ZPCh0vvfQ04V8T6QgnjtPoydOIulk802ZMi58t1ZWvggHirLanucmiQrN8Jn_ES3ZQMxAXT0iyGEcYNDFAl9jouClK2mxJcxme3chfjFXoSJfCT5v2WKLcUPHsmURl9QMatW9X-H-9mH7GYoWZ3msk37yMM-F6zJ55t8gnE4m3gwcEb0qCw2TYvkvipnuoNOTp8NgtZeQ-xW_Cx4d9-ZSI5b5n5hTCzRy2eQZAeEGh5kSeBhHKfp97yShELhu1p37MV" />
+                            <div class="flex justify-end mt-2">
+                                <span class="font-mono text-[9px] text-on-surface-variant uppercase tracking-[0.22em]">FILE_ID: COMP_EXP_009</span>
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-headline font-medium text-on-surface mb-2 lowercase">original composition</h3>
+                        <p class="text-sm text-on-surface-variant mb-6 min-h-[3rem]">Commissioned tracks and sonic worlds for runway, moving image, installation, and label projects that require a full authored score.</p>
+                        <div class="flex justify-between items-center border-t border-outline-variant/10 pt-5 font-mono text-[11px]">
+                            <span class="text-on-surface-variant uppercase">Latency</span>
+                            <span class="text-on-surface uppercase">14 Cycles</span>
+                        </div>
+                    </article>
+
+                    <article class="bg-[#0e0e0e] p-8 hover:bg-[#131313] transition-all duration-500 group relative">
+                        <div class="flex justify-between items-start mb-10">
+                            <span class="font-mono text-[10px] text-primary uppercase tracking-[0.28em]">SPECIMEN_04</span>
+                            <span class="font-mono text-[10px] text-emerald-500 uppercase tracking-[0.2em]">[OPEN]</span>
+                        </div>
+                        <div class="mb-8">
+                            <img alt="Mixing console in a dark music studio" class="w-full h-52 object-cover desaturate-[20%] group-hover:scale-[1.02] transition-all duration-700 ghost-border" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiWOZuLy_I8o4FqnvMgB_TY7DkLcTDnCORlF_01-ogTYHFqWPrz9rOS2s0ol0o69jnki9XfEk7eTzH_y-LulMKDr507E8VjsFe7Hvq2vQqBStVybq3DXlJ3PpW-RaWmYhn3v8NK3TI6MtrLBWzy2nWP8xkzH7G1XWgMZ_XgeYIe-y8KPMjfyi-w9IfinBubL4_QflVuYFPT99qR1Gd-UZzQZWb3y3njCcWGPJZjdhjN0jTgVJNHuhhpnXKGUP5xKI1C0L-xG9l5QE0" />
+                            <div class="flex justify-end mt-2">
+                                <span class="font-mono text-[9px] text-on-surface-variant uppercase tracking-[0.22em]">FILE_ID: RMX_RCON_007</span>
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-headline font-medium text-on-surface mb-2 lowercase">remix / reconstruction</h3>
+                        <p class="text-sm text-on-surface-variant mb-6 min-h-[3rem]">Reframing stems and source material into the archive's language while preserving the emotional contour of the original commission.</p>
+                        <div class="flex justify-between items-center border-t border-outline-variant/10 pt-5 font-mono text-[11px]">
+                            <span class="text-on-surface-variant uppercase">Latency</span>
+                            <span class="text-on-surface uppercase">7 Cycles</span>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="mb-24">
+                <div class="flex justify-between items-end mb-12 border-b border-outline-variant/10 pb-4">
+                    <h2 class="font-headline text-2xl tracking-tight lowercase text-on-surface">specimen references</h2>
+                    <span class="font-mono text-[10px] tracking-[0.35em] text-on-surface-variant uppercase">recent archive material</span>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div class="group cursor-crosshair">
+                        <div class="aspect-[16/9] mb-4 overflow-hidden border border-outline-variant/20">
+                            <img alt="The Concealing artwork" class="w-full h-full object-cover grayscale opacity-70 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" src="resources/releases/The Concealing Vol.1/IMG_0955.JPG" />
+                        </div>
+                        <span class="text-[10px] text-on-surface-variant uppercase tracking-widest block mb-1">specimen_01</span>
+                        <span class="text-[9px] text-primary/60">THE_CONCEALING_VOL_1.JPG</span>
+                    </div>
+                    <div class="group cursor-crosshair">
+                        <div class="aspect-[16/9] mb-4 overflow-hidden border border-outline-variant/20">
+                            <img alt="Rainative artwork" class="w-full h-full object-cover grayscale opacity-70 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" src="resources/releases/Rainative/Rainative专辑封面.png" />
+                        </div>
+                        <span class="text-[10px] text-on-surface-variant uppercase tracking-widest block mb-1">specimen_02</span>
+                        <span class="text-[9px] text-primary/60">RAINATIVE_ARTWORK.PNG</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="border border-outline-variant/20 bg-surface-container-low p-8 md:p-10">
+                <div class="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-8 items-center">
+                    <div>
+                        <p class="font-mono text-[10px] uppercase tracking-[0.35em] text-primary mb-3">inquiry_terminal</p>
+                        <h2 class="text-3xl md:text-4xl font-headline tracking-tight lowercase text-on-surface mb-3">send a brief, receive a system path.</h2>
+                        <p class="text-sm text-on-surface-variant max-w-2xl leading-relaxed">
+                            Share scope, timing, references, and format requirements. If the project aligns with the archive, a response packet will follow with pricing structure, delivery schedule, and technical notes.
+                        </p>
+                    </div>
+                    <a href="contact.html" class="border border-primary text-primary px-8 py-4 font-mono text-xs uppercase tracking-[0.3em] hover:bg-primary/10 transition-all duration-300 text-center">Inquire_Terminal</a>
+                </div>
+            </section>
+        </main>
+        <footer class="w-full py-8 border-t border-[#484848]/20 bg-[#0e0e0e]">
+            <div class="flex flex-col md:flex-row justify-between items-center px-10 w-full gap-4 max-w-[1440px] mx-auto">
+                <div class="font-mono text-[10px] uppercase tracking-widest text-[#acabaa]">
+                    NEUROMANCER // © 2024
+                </div>
+                <div class="font-mono text-[10px] uppercase tracking-widest text-[#acabaa]">
+                    COMMISSIONS_NODE: OPERATIONAL
+                </div>
+            </div>
+        </footer>
+    </body></html>

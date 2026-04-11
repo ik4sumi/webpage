@@ -36,6 +36,34 @@
         .nav-link::after { content: ""; position: absolute; left: 0; bottom: -6px; width: 100%; height: 1px; background: rgba(255,255,255,0.7); transform: scaleX(0); transform-origin: left; transition: transform 0.3s ease; }
         .nav-link:hover { letter-spacing: 0.3em; }
         .nav-link:hover::after, .nav-link.active::after { transform: scaleX(1); }
+        @media (max-width: 640px) {
+            body > header {
+                height: auto !important;
+                align-items: stretch;
+                padding: 1rem 0 1.1rem;
+                background: transparent !important;
+                backdrop-filter: blur(10px);
+            }
+            body > header > div {
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                gap: 0.95rem;
+            }
+            body > header nav {
+                flex-wrap: wrap;
+                width: 100%;
+                gap: 0.7rem 1rem;
+                justify-content: flex-start;
+                overflow: visible;
+                white-space: normal;
+            }
+            body > header nav a { white-space: nowrap; }
+        }
+        @media (max-width: 480px) {
+            body > header > div { gap: 0.8rem; }
+            body > header nav { gap: 0.6rem 0.85rem; }
+        }
     </style>
     </head>
     <body

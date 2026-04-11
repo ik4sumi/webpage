@@ -133,23 +133,6 @@
         transform: scaleX(1);
       }
       @media (max-width: 640px) {
-        body > header nav {
-          flex-wrap: nowrap;
-          overflow-x: auto;
-          gap: 1.25rem;
-          white-space: nowrap;
-          width: 100%;
-          justify-content: flex-start;
-          padding-bottom: 0.25rem;
-        }
-        body > header nav a {
-          white-space: nowrap;
-        }
-        body > header nav::-webkit-scrollbar {
-          display: none;
-        }
-      }
-      @media (max-width: 480px) {
         body > header {
           height: auto;
           align-items: flex-start;
@@ -161,7 +144,20 @@
           gap: 0.9rem;
         }
         body > header nav {
-          gap: 1rem;
+          flex-wrap: wrap;
+          width: 100%;
+          gap: 0.7rem 1rem;
+          justify-content: flex-start;
+          overflow: visible;
+          white-space: normal;
+        }
+        body > header nav a {
+          white-space: nowrap;
+        }
+      }
+      @media (max-width: 480px) {
+        body > header nav {
+          gap: 0.6rem 0.85rem;
         }
       }
     </style>

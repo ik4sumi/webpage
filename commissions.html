@@ -20,7 +20,8 @@
         }
         .service-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(340px, 340px));
+            justify-content: start;
         }
         .nav-link { position: relative; display: inline-block; color: #ffffff; text-transform: lowercase; letter-spacing: 0.15em; transition: letter-spacing 0.3s ease; }
         .nav-link::after { content: ""; position: absolute; left: 0; bottom: -6px; width: 100%; height: 1px; background: rgba(255,255,255,0.7); transform: scaleX(0); transform-origin: left; transition: transform 0.3s ease; }
@@ -63,7 +64,7 @@
                 </div>
             </header>
 
-            <section class="mb-20 grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-10 items-start">
+            <!-- <section class="mb-20 grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-10 items-start">
                 <div class="space-y-6">
                     <p class="font-mono text-[10px] uppercase tracking-[0.35em] text-primary">current availability</p>
                     <p class="max-w-2xl text-sm md:text-base text-on-surface-variant leading-relaxed">
@@ -92,13 +93,13 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
 
             <section class="mb-24">
-                <div class="flex justify-between items-end mb-12 border-b border-outline-variant/10 pb-4">
+                <!-- <div class="flex justify-between items-end mb-12 border-b border-outline-variant/10 pb-4">
                     <h2 class="font-headline text-2xl tracking-tight lowercase text-on-surface">Grid Layout for Services</h2>
                     <span class="font-mono text-[10px] tracking-[0.35em] text-on-surface-variant uppercase">4 active specimens</span>
-                </div>
+                </div> -->
                 <div class="service-grid gap-px bg-outline-variant/10 border border-outline-variant/20">
                     <a href="resources\commissions\RC_GENKI\rc_genki.html" class="group cursor-crosshair block">
                         <article class="bg-[#0e0e0e] p-8 hover:bg-[#131313] transition-all duration-500 group relative">

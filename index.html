@@ -41,6 +41,16 @@
         }
         .fade-in { animation: fade-slide-up 0.9s ease forwards; }
         .fade-in-delay { animation: fade-slide-up 1s ease forwards; animation-delay: 0.15s; opacity: 0; }
+        @media (max-width: 640px) {
+            body > header nav { flex-wrap: nowrap; overflow-x: auto; gap: 1.25rem; white-space: nowrap; width: 100%; justify-content: flex-start; padding-bottom: 0.25rem; }
+            body > header nav a { white-space: nowrap; }
+            body > header nav::-webkit-scrollbar { display: none; }
+        }
+        @media (max-width: 480px) {
+            body > header { height: auto; align-items: flex-start; padding: 0.9rem 0; }
+            body > header > div { flex-direction: column; align-items: flex-start; gap: 0.9rem; }
+            body > header nav { gap: 1rem; }
+        }
     </style>
     </head>
     <body class="font-body selection:bg-primary selection:text-on-primary">

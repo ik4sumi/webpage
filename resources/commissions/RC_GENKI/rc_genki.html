@@ -133,7 +133,7 @@
         transform: scaleX(1);
       }
       @media (max-width: 640px) {
-        header nav {
+        body > header nav {
           flex-wrap: nowrap;
           overflow-x: auto;
           gap: 1.25rem;
@@ -142,11 +142,26 @@
           justify-content: flex-start;
           padding-bottom: 0.25rem;
         }
-        header nav a {
+        body > header nav a {
           white-space: nowrap;
         }
-        header nav::-webkit-scrollbar {
+        body > header nav::-webkit-scrollbar {
           display: none;
+        }
+      }
+      @media (max-width: 480px) {
+        body > header {
+          height: auto;
+          align-items: flex-start;
+          padding: 0.9rem 0;
+        }
+        body > header > div {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0.9rem;
+        }
+        body > header nav {
+          gap: 1rem;
         }
       }
     </style>
